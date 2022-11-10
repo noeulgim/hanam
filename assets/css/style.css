@@ -1,19 +1,408 @@
 @charset "UTF-8";
 
-html,body { height: 100%; }
+html,body { height: 100%; letter-spacing: -0.1em; }
 html,body,ul,li,h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 ul,ol { list-style: none; }
-a { text-decoration: none; }
-
-:before, :after {
-  position: absolute;
-  content: '';
-}
+a { text-decoration: none; color: #7d7d7d; }
+button { border: none; background: none; padding: 0; }
+li { color: #7d7d7d; }
 
 .lnb-wrap {
   display: none;
+}
+
+header {
+  width: 100%;
+}
+.header-top-wrap {
+  border-bottom: 1px solid #e5e7ee;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  width: 1400px;
+  margin: 0 auto;
+}
+.link-wrap ul li, .header-top-right ul li, .fav-search ul li {
+  float: left;
+}
+.li-tag > div > ul > li + li {
+  position: relative;
+  margin-left: 12px;
+  padding-left: 12px;
+}
+.li-tag > div > ul > li + li:before {
+  position: absolute;
+  content: '';
+  height: 15px;
+  width: 1px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e5e7ee;
+}
+.li-tag > div.header-top-right > ul > li + li:last-child:before {
+  display: none;
+}
+.link-wrap a {
+  font-size: 15px;
+  font-weight: 400;
+}
+.link-wrap a:hover {
+  color: #1a1a1a;
+}
+.header-top-right {
+  line-height: 45px;
+}
+.header-top-right li a {
+  position: relative;
+  padding-left: 22px;
+  font-size: 13px;
+}
+.header-top-right ul li:nth-child(1) a span:before {
+  content: '';
+  position: absolute;
+  background: url('../img/user_sprite.png') no-repeat;
+  background-size: 17px auto;
+  background-position: left 100%;
+  width: 17px;
+  height: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+}
+.header-top-right ul li:nth-child(2) a span:before {
+  content: '';
+  position: absolute;
+  background: url('../img/sitemap_icon.png') no-repeat;
+  width: 14px;
+  height: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+}
+.header-top-right span {
+  font-size: 13px;
+  padding-right: 1px;
+}
+.header-top-right .font-size-btn {
+  display: inline-block;
+}
+.header-top-right .font-size-btn button {
+  background: url('../img/fz_icon.png') no-repeat;
+  background-position: 0 0;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e5e7ee;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.header-top-right .font-size-btn button:nth-child(2) {
+  background-position: -39px 0;
+}
+.header-top-right .font-size-btn button:nth-child(3) {
+  background-position: -78px 0;
+}
+.header-top-right .font-size-btn button:hover {
+  background-position: 0 -49px;
+}
+.header-top-right .font-size-btn button:nth-child(2):hover {
+  background-position: -39px -49px;
+}
+.header-top-right .font-size-btn button:nth-child(3):hover {
+  background-position: -78px -49px;
+}
+.header-top-right li:last-child {
+  background: #00a3aa;
+  padding-left: 0;
+}
+.header-top-right li:last-child a {
+  position: relative;
+  display: inline-block;
+  padding: 0 25px 0 40px;
+  height: 45px;
+}
+.header-top-right li:last-child a:before {
+  content: '';
+  position: absolute;
+  background: url('../img/welfare_sprite.png') no-repeat;
+  top: 16px;
+  left: 18px;
+  width: 16px;
+  height: 14px;
+  background-position: left 52.08%;
+  transition-property: background-position;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.header-top-right li:last-child a:hover:before {
+  background-position: left 100%;
+}
+.header-top-right li:last-child a span {
+  display: inline-block;
+  background: url('../img/welfare_sprite.png') no-repeat;
+  width: 53px;
+  height: 15px;
+  margin-top: 15px;
+  background-position: left top;
+}
+
+.header-main-wrap {
+  border-bottom: 1px solid #e5e7ee;
+}
+.header-main {
+  position: relative;
+  width: 1400px;
+  height: 160px;
+  margin: 0 auto;
+}
+.header-main .logo {
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+.header-main .searching {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 541px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.header-main .searching form {
+  overflow: hidden;
+  position: relative;
+  margin-top: 35px;
+  padding: 15px 125px 13px 30px;
+  border: 2px solid #437dea;
+  border-radius: 13px;
+}
+.header-main .searching form input:first-child {
+  width: 100%;
+  background-color: transparent;
+  color: #000;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 26px;
+  border: none;
+}
+.header-main .searching form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 58px;
+  background: #437dea url('../img/search_submit.png') no-repeat center center;
+  border: none;
+}
+.header-main .searching .fav-search {
+  overflow: hidden;
+  position: relative;
+  height: 22px;
+  margin-top: 12px;
+  padding-right: 40px;
+  padding-left: 125px;
+}
+.header-main .searching .fav-search span {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  padding-left: 22px;
+  color: #2a2f5e;
+  font-size: 16px;
+  line-height: 22px;
+}
+.header-main .searching .fav-search span:before {
+  content: '';
+  position: absolute;
+  display: block;
+  background: url('../img/word_icon.png') no-repeat;
+  top: 4px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+}
+.header-main .searching .fav-search ul {
+  display: inline-flex;
+}
+.searching.li-tag > div > ul > li + li {
+  margin-left: 11px;
+}
+.fav-search a {
+  font-size: 15px;
+}
+.header-main .weather-wrap {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  height: 76px;
+}
+.header-main .weather-wrap .weather.left {
+  display: inline-block;
+}
+.header-main .weather-wrap .weather.left div {
+  display: inline-block;
+  padding-top: 9px;
+  padding-left: 88px;
+  height: 100%;
+  vertical-align: top;
+  color: #1a1a1a;
+  font-size: 24px;
+  line-height: 30px;
+}
+.header-main .weather-wrap .weather.left div:before {
+  content: '';
+  background: url('../img/weather_sprite2.png') no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 76px auto;
+  background-color: #f4f5f9;
+}
+.header-main .weather-wrap .weather.right {
+  display: inline-block;
+  position: relative;
+  margin-left: 16px;
+  padding-top: 12px;
+  padding-left: 17px;
+  vertical-align: top;
+}
+.header-main .weather-wrap .weather.right:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  bottom: 2px;
+  width: 1px;
+  background: url('../img/weather_dot.png') repeat-y;
+}
+.header-main .weather-wrap .weather.right > span {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7d7d7d;
+}
+.header-main .weather-wrap .weather.right .w-condition {
+  color: #437dea;
+  margin-left: 2px;
+}
+
+.gnb-wrap {
+  border-bottom: 1px solid #e5e7ee;
+}
+.gnb {
+  position: relative;
+  width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 59px;
+}
+.gnb .content {
+  margin-right: 310px;
+  text-align: center;
+  overflow: hidden;
+}
+.gnb .content ul li {
+  width: 16.66%;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 12px;
+}
+.gnb .content ul li a {
+  display: inline-block;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+  transition-property: color;
+}
+.gnb button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.gnb button span {
+  position: relative;
+  font-size: 18px;
+  color: #00a3a0;
+  line-height: 60px;
+  padding-right: 25px;
+}
+.gnb button span:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 17px;
+  height: 14px;
+  bottom: 5px;
+  background: url('../img/family_icon.png') no-repeat;
+}
+#main {
+  position: relative;
+}
+#main:before {
+  content: '';
+  position: absolute;
+  background: url('../img/rowgroup_bg.png');
+  right: 0;
+}
+#main .contents-wrap {
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  padding-top: 65px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#main .contents-wrap .items:first-child {
+  flex: 770px;
+}
+#main .contents-wrap .items:last-child {
+  position: absolute;
+  flex: calc(100% - 770px);
+  right: 0;
+}
+#main .swiper {
+  width: 770px;
+}
+#main .items .character {
+  position: relative;
+  width: 540px;
+  height: 330px;
+  padding: 85px 0 0 52px;
+  border: 1px solid #ffd5d1;
+  border-radius: 35px;
+  background-color: #ffecea;
+  box-shadow: 19px 38px 30px 0 rgb(25 53 116 / 12%);
+  box-sizing: border-box;
+}
+#main .items .character:before {
+  position: absolute;
+  content: '';
+  background: url('../img/mayor_photo2.png') no-repeat;
+  right: 36px;
+  bottom: 0;
+  width: 269px;
+  height: 319px;
 }
