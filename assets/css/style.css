@@ -1,7 +1,19 @@
 @charset "UTF-8";
+@font-face{font-weight:400; font-family:'DWImpactamin'; src:url("../font/DWImpactamin.woff2") format('woff2'),url("/common_2020/fonts/DWImpactamin.woff") format('woff');}
+.covid .covid_title,
+.visual .visual_title,
+h2,
+.character p,
+.board .board_title,
+.fact .fact_title,
+.promotion .promotion_title,
+.favorite .favorite_title,
+.service .service_slogan,
+.photo .photo_title,
+.sns .sns_title{font-weight:400; font-family:'DWImpactamin', sans-serif;}
 
 html,body { height: 100%; letter-spacing: -0.1em; }
-html,body,ul,li,h1,h2,h3,h4,h5,h6 {
+html,body,ul,li,h1,h2,h3,h4,h5,h6,p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,7 +23,30 @@ a { text-decoration: none; color: #7d7d7d; }
 button { border: none; background: none; padding: 0; }
 li { color: #7d7d7d; }
 
+h2 {
+  color: #ec6c61;
+  font-size: 30px;
+  line-height: 41px;
+  letter-spacing: -0.025em;
+}
+h2 > span {
+  color: #111d68;
+}
+
+.contents-wrap {
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .lnb-wrap {
+  display: none;
+  position: absolute;
+}
+.b-contents {
   display: none;
 }
 
@@ -40,7 +75,7 @@ header {
 .li-tag > div > ul > li + li:before {
   position: absolute;
   content: '';
-  height: 15px;
+  height: 10px;
   width: 1px;
   left: 0;
   top: 50%;
@@ -363,33 +398,45 @@ header {
 #main:before {
   content: '';
   position: absolute;
-  background: url('../img/rowgroup_bg.png');
+  background: url('../img/rowgroup_bg.png') no-repeat;
+  top: 0;
   right: 0;
+  bottom: -60px;
+  width: 1265px;
+  background-size: cover;
 }
 #main .contents-wrap {
-  position: relative;
-  max-width: 1400px;
-  width: 100%;
-  display: flex;
   padding-top: 65px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 860px;
 }
-#main .contents-wrap .items:first-child {
-  flex: 770px;
-}
-#main .contents-wrap .items:last-child {
+#main .contents-wrap:before {
+  content: '';
+  display: block;
   position: absolute;
-  flex: calc(100% - 770px);
-  right: 0;
+  top: 285px;
+  right: calc(100% + 77px);
+  width: 100%;
+  height: 24px;
+  border-bottom: 1px solid #e5e7ee;
+  background: url('../img/rowgroup_text.png') no-repeat right top;
 }
-#main .swiper {
+#main .contents-wrap h2 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+#main .contents-wrap .swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 120px;
   width: 770px;
+  border-radius: 40px;
 }
-#main .items .character {
+#main .contents-wrap .character {
   position: relative;
-  width: 540px;
   height: 330px;
+  width: 540px;
   padding: 85px 0 0 52px;
   border: 1px solid #ffd5d1;
   border-radius: 35px;
@@ -397,7 +444,7 @@ header {
   box-shadow: 19px 38px 30px 0 rgb(25 53 116 / 12%);
   box-sizing: border-box;
 }
-#main .items .character:before {
+#main .contents-wrap .character:before {
   position: absolute;
   content: '';
   background: url('../img/mayor_photo2.png') no-repeat;
@@ -405,4 +452,326 @@ header {
   bottom: 0;
   width: 269px;
   height: 319px;
+}
+#main .contents-wrap .character:after {
+  content: '';
+  position: absolute;
+  top: 88px;
+  right: -41px;
+  width: 439px;
+  height: 439px;
+  background: url('../img/mayor_bg2.png') no-repeat;
+}
+#main .contents-wrap .character p {
+  position: relative;
+  color: #363c5a;
+  font-size: 26px;
+  line-height: 38px;
+  letter-spacing: -0.025em;
+}
+#main .contents-wrap .character p span {
+  font-size: 36px;
+  letter-spacing: 0.05em;
+}
+#main .contents-wrap .character .link {
+  position: relative;
+  margin-top: 38px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+#main .contents-wrap .character .link a {
+  border-radius: 16px;
+  z-index: 1;
+}
+#main .contents-wrap .character .link span {
+  display: inline-block;
+  position: relative;
+  padding-right: 38px;
+  padding-left: 30px;
+  border-radius: 16px;
+  color: #43475e;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: -0.03em;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+#main .contents-wrap .character .link span:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16px;
+  height: 1px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #939ab0;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+#main .contents-wrap .character .link span:after {
+  position: absolute;
+  background: url('../img/mayor_sprite.png') no-repeat;
+  display: block;
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  top: 13px;
+  right: 17px;
+  width: 17px;
+  height: 9px;
+    background-position: left top;
+  transition-property: opacity, visibility;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+#main .contents-wrap .character .link a:hover span {
+  background: #fff;
+  margin-left: -10px;
+  padding-left: 20px;
+  box-shadow: 2px 4px 20px 0 rgba(0,0,0,7%);
+  color: #ec6c61;
+}
+#main .contents-wrap .character .link a:hover span:before {
+  opacity: 0;
+  left: -20px;
+}
+#main .contents-wrap .character .link a:hover span:after {
+  opacity: 1;
+  visibility: inherit;
+}
+#main .contents-wrap .main-icon {
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+#main .contents-wrap .main-icon a {
+  display: block;
+}
+#main .contents-wrap .main-icon a .icon {
+  position: relative;
+  overflow: hidden;
+  top: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 30px;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgb(13 36 78 / 15%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main .contents-wrap .main-icon a .icon div {
+  width: 44px;
+  height: 44px;
+  background: url('../img/shortcut_sprite.png') no-repeat;
+  background-position: left top;
+}
+#main .contents-wrap .main-icon a:nth-child(2) .icon div {
+  background-position: left 33.33%;
+}
+#main .contents-wrap .main-icon a:nth-child(3) .icon div {
+  background-position: left 66.66%;
+}
+#main .contents-wrap .main-icon a:nth-child(4) .icon div {
+  background-position: left 100%;
+}
+#main .contents-wrap .main-icon a:hover .icon {
+  box-shadow: 0 0 25px 0 rgb(13 36 78 / 25%);
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+#main .contents-wrap .main-icon a:hover .icon div {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transform: rotateY(360deg);
+}
+#main .contents-wrap .main-icon a p {
+  margin-top: 30px;
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 19px;
+  white-space: nowrap;
+}
+
+#first {
+  margin-top: 39px;
+  position: relative;
+}
+#first .contents-wrap {
+  position: relative;
+  padding-right: 610px;
+}
+#first .board {
+  position: relative;
+  width: 100%;
+  height: 511px;
+}
+#first .board:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 20px;
+  background-color: #e5e7ee;
+  left: 215px;
+  right: auto;
+  width: 100vw;
+  height: 1px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#first .board .board-top {
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+#first .board .board-top:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #e5e7ee;
+}
+#first .board .board-top ul {
+  position: relative;
+}
+#first .board .board-top > ul:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #e5e7ee;
+}
+#first .board .board-top ul > a {
+  overflow: hidden;
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  width: 28px;
+  height: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  border: 1px solid #e5e7ee;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#first .board .board-top ul > a:after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: url('../img/board_sprite.png') no-repeat;
+  background-position: left 78.84%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#first .board ul li {
+  position: relative;
+  display: inline-block;
+}
+#first .board ul li a {
+  display: inline-block;
+  position: relative;
+  height: 65px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #7a7d96;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 65px;
+  transition-duration: 0.2s;
+  transition-property: font-size;
+  transition-timing-function: ease-in-out;
+}
+#first .board ul li a.active {
+  color: #111d68;
+  font-size: 20px;
+  font-weight: 400;
+}
+#first .board .b-contents {
+  position: absolute;
+  margin-top: 25px;
+  width: 100%;
+}
+#first .board .b-contents ul li {
+  display: flex;
+  justify-content: space-between;
+}
+#first .board .b-contents ul li + li {
+  border-top: 1px solid #e5e7ee;
+}
+#first .board .b-contents ul li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 27px;
+  height: 100%;
+  overflow: hidden;
+  max-height: 60px;
+  color: #1a1a1a;
+  font-size: 17px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  white-space: nowrap;
+}
+#first .board .b-contents ul li a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 27px;
+  left: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #437dea;
+}
+#first .board .b-contents ul li span {
+  line-height: 60px;
+  text-align: center;
+  width: 105px;
+}
+#first .promotion {
+  position: absolute;
+  top: 61px;
+  right: 0;
+  width: 540px;
+  box-sizing: border-box;
+}
+#first .promotion:before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+  width: 100%;
+  height: calc(100% - 22px);
+  border-radius: 30px;
+  border: 1px solid #e5e7ee;
+  box-sizing: border-box;
+}
+#first .promotion h2 {
+  position: relative;
+  padding: 17px 0 12px 60px;
+  color: #ec6c61;
+  font-size: 30px;
+  line-height: 41px;
+}
+#first .promtion .swiper .swiper-slide {
+  border-radius: 30px;
+  overflow: hidden;
 }
