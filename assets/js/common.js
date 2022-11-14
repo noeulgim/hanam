@@ -9,17 +9,41 @@ $(function(){
     });
   });
 
+  var lnb = $('.lnb-wrap');
+  var gnb = $('.gnb-wrap');
+  var gnbBtn = $('.gnb-btn');
+  gnbBtn.each(function(){
+    $(this).mouseenter(function(){
+      $(this).addClass('gnb-active');
+      var gnbId = $(this).attr('id');
+      $(lnb).each(function(){
+        if( $(this).hasClass(gnbId) ){
+          $(this).addClass('lnb-active');
+        }
+        // gnb.addClass(gnbId);
+      });
+    }).mouseleave(function(){
+      gnbBtn.removeClass('gnb-active');
+      $(lnb).removeClass('lnb-active');
+    });
+  });
   // ------------------------swiper---------------------------
   var swiper = new Swiper(".mySwiper", {
-        pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+    autoplay: {
+      delay: 5000
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    speed: 500,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
     $('.slick-slider').slick({
       slide: 'div:not(div.slick-line-hide)',        //슬라이드 되어야 할 태그
