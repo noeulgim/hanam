@@ -1442,3 +1442,126 @@ header {
   font-size: 14px;
   font-weight: 600;
 }
+#fourth .link-wrap {
+  border-collapse: collapse;
+}
+#fourth .link-wrap a {
+  width: 50%;
+  float: left;
+  border: 1px solid #d5e1da;
+  box-sizing: border-box;
+  padding-left: 60px;
+    background: url(../images/main/shortcut_arrow.png) no-repeat 30px center;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 63px;
+}
+#fourth .items:nth-child(2) .title-wrap {
+  /* overflow: hidden; */
+  margin-top: 38px;
+}
+#fourth .items:nth-child(2) .title-wrap h2 {
+  display: inline-block;
+  position: relative;
+  padding-left: 110px;
+  color: #111d68;
+  font-size: 30px;
+  line-height: 36px;
+}
+#fourth .items:nth-child(2) .title-wrap h2:before {
+  content: '';
+  position: absolute;
+  top: -38px;
+  left: 0;
+  width: 101px;
+  height: 66px;
+  background-position: left top;
+  background: url('../img/sns_sprite.png') no-repeat;
+}
+#fourth .items:nth-child(2) .title-wrap ul {
+  float: right;
+}
+#fourth .items:nth-child(2) .title-wrap ul li {
+  float: left;
+  padding-left: 10px;
+}
+#fourth .items:nth-child(2) .title-wrap ul li a {
+  display: block;
+  overflow: hidden;
+  width: 36px;
+  position: relative;
+  height: 36px;
+  border-radius: 18px;
+  color: #fff;
+  font-size: 0;
+  line-height: 36px;
+  transition-property: box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(1) a {
+  background: #59c843;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(2) a {
+  background: #d91e1e;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(3) a {
+  background: url('../img/sns_bg.png') no-repeat;
+  background-size: 100% 100%;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(4) a {
+  background: #ffdc50;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(5) a {
+  background: #4868ac;
+}
+#fourth .items:nth-child(2) .title-wrap ul li a:after {
+  content: '';
+  position: absolute;
+  background: url('../img/sns_sprite.png') no-repeat;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 36px;
+  height: 36px;
+  margin: auto;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(1) a:after {
+  background-position: left 27.35%;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(2) a:after {
+  background-position: left 37.66%;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(3) a:after {
+  background-position: left 47.98%;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(4) a:after {
+  background-position: left 58.29%;
+}
+#fourth .items:nth-child(2) .title-wrap ul li:nth-child(5) a:after {
+  background-position: left 17.04%;
+}
+#fourth .items:nth-child(2) .photolink-wrap {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item {
+  display: block;
+  position: relative;
+  height: 198px;
+  padding: 19px 29px 19px 29px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item .photo-wrap {
+  width: 160px;
+  height: 160px;
+  background-color: #000;
+  text-align: center;
+  flex-shrink: 0;
+  line-height: 160px;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item:nth-child(2) {
+  margin: 0;
+}
