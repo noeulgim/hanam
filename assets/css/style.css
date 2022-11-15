@@ -1359,10 +1359,10 @@ header {
   margin-bottom: 30px;
 }
 #fourth .photolink-wrap .item:nth-child(2) {
-  margin-bottom: 20px;
-}
-#fourth .photolink-wrap .item + .item {
-  margin-top: 20px;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #e5e7ee;
+  border-bottom: 1px solid #e5e7ee;
 }
 #fourth .photolink-wrap .item > a {
   display: flex;
@@ -1413,7 +1413,7 @@ header {
   display: inline-block;
   max-height: 56px;
   line-height: 28px;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 600;
   vertical-align: bottom;
   word-break: keep-all;
