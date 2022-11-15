@@ -1308,9 +1308,11 @@ header {
   margin: 0 auto;
 }
 #fourth .items:nth-child(1) {
-  flex: 50%;
   flex-grow: 0;
   padding-right: 50px;
+}
+#fourth .items:nth-child(2) .photolink-wrap {
+  border: 1px solid #e5e7ee;
 }
 #fourth .title-wrap {
   position: relative;
