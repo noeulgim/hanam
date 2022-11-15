@@ -1315,7 +1315,7 @@ header {
 #fourth .title-wrap {
   position: relative;
 }
-#fourth .title-wrap a {
+#fourth .title-wrap > a {
   display: inline-block;
   position: absolute;
   top: 0;
@@ -1332,7 +1332,7 @@ header {
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
 }
-#fourth .title-wrap a:after {
+#fourth .title-wrap > a:after {
   content: '';
   position: absolute;
   background: url('../img/photo_arrow.png') no-repeat;
@@ -1347,25 +1347,25 @@ header {
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
 }
-#fourth .title-wrap a:hover {
+#fourth .title-wrap > a:hover {
   border-color: #437dea;
   color: #437dea;
 }
-#fourth .title-wrap a:hover:after {
+#fourth .title-wrap > a:hover:after {
   right: 22px;
 }
 #fourth .photolink-wrap {
   margin-top: 35px;
   margin-bottom: 30px;
 }
-#fourth .photolink-wrap .item {
+#fourth .photolink-wrap .item:nth-child(2) {
   margin-bottom: 20px;
 }
 #fourth .photolink-wrap .item + .item {
   margin-top: 20px;
 }
-#fourth .photolink-wrap .item a {
-  display: inline-block;
+#fourth .photolink-wrap .item > a {
+  display: flex;
 }
 #fourth .items .photolink-wrap .item .photo-wrap {
   display: inline-block;
@@ -1379,6 +1379,7 @@ header {
 #fourth .items:first-child .photolink-wrap .item:first-child .photo-wrap {
   width: 280px;
   height: 195px;
+  flex-shrink: 0;
 }
 #fourth .photolink-wrap .item .photo-wrap img {
   width: 100%;
@@ -1402,12 +1403,20 @@ header {
 #fourth .photolink-wrap .item:nth-child(1) .sub .ac-title {
   background: #ec6c61;
 }
+#fourth .photolink-wrap .item:nth-child(2) .sub .ac-title {
+  background: #00a3a0;
+}
+#fourth .photolink-wrap .item:nth-child(3) .sub .ac-title {
+  background: #437dea;
+}
 #fourth .photolink-wrap .item .sub .min-title {
+  display: inline-block;
   max-height: 56px;
   line-height: 28px;
   font-size: 19px;
   font-weight: 600;
   vertical-align: bottom;
+  word-break: keep-all;
 }
 #fourth .photolink-wrap .item .sub p {
   max-height: 66px;
@@ -1420,13 +1429,14 @@ header {
   -webkit-line-clamp: 3;
   display: -webkit-box;
   overflow: hidden;
+  word-break: keep-all;
   white-space: normal;
   box-sizing: border-box;
 }
 #fourth .photolink-wrap .item .sub .date {
+  display: block;
   margin-top: 10px;
   color: #636363;
   font-size: 14px;
-  font-weight: 300;
-  display: inline-block;
+  font-weight: 600;
 }
