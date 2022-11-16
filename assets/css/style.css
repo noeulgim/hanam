@@ -12,7 +12,7 @@ h2,
 .photo .photo_title,
 .sns .sns_title{font-weight:400; font-family:'DWImpactamin', sans-serif;}
 
-html,body { height: 100%; letter-spacing: -0.025em; overflow-x: hidden; }
+html,body { height: 100%; letter-spacing: -0.025em; overflow-x: hidden; min-width: 1330px; }
 html,body,ul,li,h1,h2,h3,h4,h5,h6,p {
   margin: 0;
   padding: 0;
@@ -1443,19 +1443,28 @@ header {
   font-weight: 600;
 }
 #fourth .link-wrap {
+  overflow: hidden;
+  border-radius: 5px;
+  background: #f9f9f4;
   border-collapse: collapse;
 }
 #fourth .link-wrap a {
   width: 50%;
   float: left;
+  position: relative;
   border: 1px solid #d5e1da;
   box-sizing: border-box;
   padding-left: 60px;
-    background: url(../images/main/shortcut_arrow.png) no-repeat 30px center;
-    color: #1a1a1a;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 63px;
+  background: url('../img/shortcut_arrow.png') no-repeat 30px center;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 63px;
+}
+#fourth .link-wrap a:before {
+  content: '';
+  position: absolute;
+  background: url('../img/shortcut_arrow.png') no-repeat 30px center;
 }
 #fourth .items:nth-child(2) .title-wrap {
   /* overflow: hidden; */
@@ -1485,6 +1494,9 @@ header {
 #fourth .items:nth-child(2) .title-wrap ul li {
   float: left;
   padding-left: 10px;
+}
+#fourth .items:nth-child(2) .title-wrap ul li a:hover {
+  box-shadow: 0 0 10px 0 rgb(13 36 78 / 25%);
 }
 #fourth .items:nth-child(2) .title-wrap ul li a {
   display: block;
@@ -1564,4 +1576,219 @@ header {
 }
 #fourth .items:nth-child(2) .photolink-wrap .item:nth-child(2) {
   margin: 0;
+}
+
+#footer {
+  border-top: 1px solid #d3d6e1;
+  box-sizing: border-box;
+  padding-bottom: 70px;
+}
+#footer .banner {
+  position: relative;
+  width: 1400px;
+  margin: 0 auto;
+}
+#footer .banner .banner-logo {
+  position: absolute;
+  top: 21px;
+  left: 0;
+  padding-left: 38px;
+  background-color: #fff;
+  color: #4a506b;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+}
+#footer .banner .banner-logo span:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 1px;
+  width: 24px;
+  height: 23px;
+  background: url('../img/banner_sprite.png') no-repeat;
+}
+#footer .banner .swiper {
+  padding-left: 125px;
+  min-width: 1150px;
+}
+#footer .banner .swiper .swiper-wrapper {
+  height: 69px;
+}
+#footer .banner .swiper .swiper-slide {
+  min-height: 69px;
+  line-height: 69px;
+}
+#footer .banner .swiper .swiper-slide ul {
+  overflow: hidden;
+}
+#footer .banner .swiper .swiper-slide ul li {
+  position: relative;
+  float: left;
+  display: inline-block;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 25px;
+  color: #636363;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: -.1em;
+}
+#footer .banner .swiper .swiper-slide ul li + li {
+  margin-left: 25px;
+}
+#footer .banner .swiper .swiper-slide ul li + li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  height: 3px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 100%;
+  background-color: #cbceda;
+}
+#footer .banner .swiper .swiper-slide ul li a {
+  position: relative;
+}
+#footer .banner .swiper .swiper-slide ul li a:after {
+  display: block;
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dotted #3b434f;
+}
+#footer .banner .swiper .swiper-slide ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+.swiper-button-prev, .swiper-button-next { display: none; }
+#footer .banner .swiper-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  line-height: 69px;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 10;
+}
+#footer .banner .swiper-btn button, #footer .banner .swiper-btn a {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  vertical-align: middle;
+  background: url('../img/banner_sprite.png') no-repeat;
+  cursor: pointer;
+}
+#footer .banner .swiper-btn button {
+  margin-right: 2px;
+}
+#footer .banner .swiper-btn button:nth-child(1) {
+  width: 13px;
+  height: 9px;
+  background-position: left 29.05%;
+}
+#footer .banner .swiper-btn button:nth-child(2) {
+  width: 7px;
+  height: 10px;
+  background-position: left 62.06%;
+}
+#footer .banner .swiper-btn button:nth-child(3) {
+  width: 13px;
+  height: 9px;
+  background-position: left 45.29%;
+}
+#footer .banner .swiper-btn a {
+  width: 12px;
+  height: 12px;
+  background-position: left 100%;
+}
+#footer .fnb {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4a506b;
+}
+#footer .fnb .inner {
+  width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#footer .fnb .inner ul {
+  overflow: hidden;
+}
+#footer .fnb .inner ul li {
+  position: relative;
+  float: left;
+  padding: 0 15px;
+}
+#footer .fnb .inner ul li:nth-child(1) {
+  padding-left: 0;
+}
+#footer .fnb .inner ul li + li:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  height: 3px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 100%;
+  background-color: #60667e;
+}
+#footer .fnb .inner ul li a {
+  display: block;
+  padding-top: 1px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 30px;
+}
+#footer .fnb .inner ul li:nth-child(1) a {
+  color: #dca940;
+}
+#footer .fnb .inner ul li a:hover {
+  text-decoration: underline;
+}
+#footer .f-bottom {
+  position: relative;
+  width: 1400px;
+  margin: 30px auto 0;
+}
+#footer .f-bottom .f-logo {
+  display: inline-block;
+  padding-right: 70px;
+}
+#footer .f-bottom .address {
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 30px;
+  color: #969696;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  vertical-align: top;
+  letter-spacing: -.1em;
+}
+#footer .f-bottom .address .f-add {
+  display: inline-block;
+}
+#footer .f-bottom .r-img {
+  position: absolute;
+  top: -10px;
+  right: 0;
 }

@@ -18,7 +18,7 @@ $(function(){
       var gnbId = $(this).attr('id');
       $(lnb).each(function(){
         if( $(this).hasClass(gnbId) ){
-          $(this).addClass('lnb-active');
+          $(this).addClass('lnb-active')
         }
         // gnb.addClass(gnbId);
       });
@@ -27,10 +27,18 @@ $(function(){
       $(lnb).removeClass('lnb-active');
     });
   });
+
+  $('.swiper-next').click(function(){
+    $('.swiper-button-next').trigger('click');
+  });
+  $('.swiper-prev').click(function(){
+    $('.swiper-button-prev').trigger('click');
+  });
   // ------------------------swiper---------------------------
   var swiper = new Swiper(".mySwiper", {
     autoplay: {
-      delay: 5000
+      delay: 5000,
+      disableOnInteraction: false
     },
     loop: true,
     loopAdditionalSlides: 1,
@@ -41,9 +49,26 @@ $(function(){
     },
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+      prevEl: ".swiper-button-prev"
+    }
   });
+
+  var swiper = new Swiper(".f-banner", {
+    direction: "vertical",
+    slidesPerView: 1,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    speed: 500,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+
 
     $('.slick-slider').slick({
       slide: 'div:not(div.slick-line-hide)',        //슬라이드 되어야 할 태그
