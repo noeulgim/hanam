@@ -102,6 +102,12 @@
                 <button><span>하남 패밀리사이트</span></button>
               </ul>
             </div>
+            <div class="family-site">
+              <div class="fm-site-wrap">
+                <div class="title"></div>
+                </div>
+              </div>
+            </div>
             </nav>
           <div class="lnb-wrap gnb-first">
             <div class="lnb-inner">
@@ -613,14 +619,16 @@
       <div id="container">
         <section id="main">
           <div class="contents-wrap">
+            <div class="swiper-prev main"></div>
+            <div class="swiper-next main"></div>
             <h2>정보<span>하남</span></h2>
             <div class="items">
-              <div class="swiper mySwiper">
+              <div class="swiper mainSwiper">
                 <div class="swiper-pagination">
                 </div>
                 <button></button>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next main"></div>
+                <div class="swiper-button-prev main"></div>
                 <div class="swiper-wrapper">
                   <div class="swiper-slide"><a href="#"><img src="./assets/img/swiper-main/img01.jpg" alt=""></a></div>
                   <div class="swiper-slide"><a href="#"><img src="./assets/img/swiper-main/img02.jpg" alt=""></a></div>
@@ -732,10 +740,16 @@
                 </div>
               </div>
               <div class="promotion">
-                <h2>홍보<span>하남</span></h2>
-                <div class="swiper mySwiper">
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
+                <div class="swiper promSwiper">
+                  <h2>홍보<span>하남</span></h2>
+                  <div class="swiper-pagination"></div>
+                  <div class="prom-control">
+                    <button class="swiper-prev prom"></button>
+                    <button></button>
+                    <button class="swiper-next prom"></button>
+                  </div>
+                  <div class="swiper-button-next prom"></div>
+                  <div class="swiper-button-prev prom"></div>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide"><a href="#"><img src="./assets/img/swiper-prom/img01.jpg" alt=""></a></div>
                     <div class="swiper-slide"><a href="#"><img src="./assets/img/swiper-prom/img02.jpg" alt=""></a></div>
@@ -748,7 +762,6 @@
                     <div class="swiper-slide"><a href="#"><img src="./assets/img/swiper-prom/img09.jpg" alt=""></a></div>
                     <div class="swiper-slide"><a href="#"><img src="./assets/img/swiper-prom/img10.jpg" alt=""></a></div>
                   </div>
-                  <div class="swiper-pagination"></div>
                 </div>
               </div>
             </div>
@@ -972,9 +985,9 @@
               <div class="photolink-wrap">
                 <div class="item">
                   <a href="#">
-                    <div class="photo-wrap">
+                    <span class="photo-wrap">
                       <img src="./assets/img/photo-link/hqdefault.jpg" alt="">
-                    </div>
+                    </span>
                     <div class="sub">
                       <p>뭐? 구직, 구인 걱정? 2022 하남시 일자리박람회로 해결!! /내일(My Job)을 만나는날!</p>
                       <span class="date">2022-11-12</span>
@@ -1013,7 +1026,7 @@
           <div class="banner-logo">
             <span>배너모음</span>
           </div>
-          <div class="swiper f-banner">
+          <div class="swiper f-bannerSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <ul>
@@ -1071,13 +1084,13 @@
                 </ul>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next f-banner"></div>
+            <div class="swiper-button-prev f-banner"></div>
           </div>
           <div class="swiper-btn">
-            <button class="swiper-prev"></button>
+            <button class="swiper-prev f-banner"></button>
             <button class="swiper-pause"></button>
-            <button class="swiper-next"></button>
+            <button class="swiper-next f-banner"></button>
             <a href="#"></a>
           </div>
         </div>

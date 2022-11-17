@@ -28,14 +28,26 @@ $(function(){
     });
   });
 
-  $('.swiper-next').click(function(){
-    $('.swiper-button-next').trigger('click');
+  $('.swiper-next.main').click(function(){
+    $('.swiper-button-next.main').trigger('click');
   });
-  $('.swiper-prev').click(function(){
-    $('.swiper-button-prev').trigger('click');
+  $('.swiper-prev.main').click(function(){
+    $('.swiper-button-prev.main').trigger('click');
+  });
+  $('.swiper-next.prom').click(function(){
+    $('.swiper-button-next.prom').trigger('click');
+  });
+  $('.swiper-prev.prom').click(function(){
+    $('.swiper-button-prev.prom').trigger('click');
+  });
+  $('.swiper-next.f-banner').click(function(){
+    $('.swiper-button-next.f-banner').trigger('click');
+  });
+  $('.swiper-prev.f-banner').click(function(){
+    $('.swiper-button-prev.f-banner').trigger('click');
   });
   // ------------------------swiper---------------------------
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".mainSwiper", {
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
@@ -48,12 +60,30 @@ $(function(){
       type: "fraction",
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: ".swiper-button-next.main",
+      prevEl: ".swiper-button-prev.main"
     }
   });
 
-  var swiper = new Swiper(".f-banner", {
+  var swiper = new Swiper(".promSwiper", {
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    speed: 500,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next.prom",
+      prevEl: ".swiper-button-prev.prom"
+    }
+  });
+
+  var swiper = new Swiper(".f-bannerSwiper", {
     direction: "vertical",
     slidesPerView: 1,
     autoplay: {
@@ -64,8 +94,8 @@ $(function(){
     loopAdditionalSlides: 1,
     speed: 500,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: ".swiper-button-next.f-banner",
+      prevEl: ".swiper-button-prev.f-banner"
     }
   });
 

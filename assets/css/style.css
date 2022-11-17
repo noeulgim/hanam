@@ -12,7 +12,7 @@ h2,
 .photo .photo_title,
 .sns .sns_title{font-weight:400; font-family:'DWImpactamin', sans-serif;}
 
-html,body { height: 100%; letter-spacing: -0.025em; overflow-x: hidden; min-width: 1330px; }
+html,body { height: 100%; letter-spacing: -.1em; overflow-x: hidden; min-width: 1330px; }
 html,body,ul,li,h1,h2,h3,h4,h5,h6,p {
   margin: 0;
   padding: 0;
@@ -429,6 +429,7 @@ header {
   color: #1a1a1a;
   font-size: 20px;
   font-weight: 600;
+  letter-spacing: -.1em;
   text-decoration: none;
   text-align: center;
   line-height: 20px;
@@ -466,9 +467,11 @@ header {
 .gnb button span {
   position: relative;
   font-size: 18px;
+  font-weight: 700;
   color: #00a3a0;
   line-height: 60px;
   padding-right: 25px;
+  letter-spacing: -.1em;
 }
 .gnb button span:after {
   content: '';
@@ -624,6 +627,30 @@ header {
   position: absolute;
   top: 50px;
   left: 0;
+}
+#main .contents-wrap .swiper-prev, #main .contents-wrap .swiper-next {
+  position: absolute;
+  background: url('../img/visual_sprite.png') no-repeat;
+  top: 53%;
+  width: 24px;
+  height: 24px;
+  z-index: 20;
+  opacity: .5;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+#main .contents-wrap .swiper-prev:hover, #main .contents-wrap .swiper-next:hover {
+  opacity: 1;
+}
+#main .contents-wrap .swiper-prev {
+  background-position: left 77.92%;
+  left: -40px;
+}
+#main .contents-wrap .swiper-next {
+  background-position: left 100%;
+  left: 56%;
 }
 #main .contents-wrap .swiper {
   position: absolute;
@@ -1033,9 +1060,52 @@ header {
   font-size: 30px;
   line-height: 41px;
 }
+#first .promotion .swiper {
+  border-radius: 30px;
+}
 #first .promotion .swiper .swiper-slide {
   border-radius: 30px;
   overflow: hidden;
+}
+#first .promotion .prom-control {
+  position: absolute;
+  bottom: 371px;
+  right: 25px;
+  margin-bottom: 21px;
+}
+#first .promotion .swiper-pagination {
+  position: absolute;
+  top: 25px;
+  bottom: 100%;
+  left: 25%;
+  letter-spacing: -.1em;
+}
+#first .promotion .swiper-pagination span {
+  font-size: 15px;
+  color: #969696;
+  font-weight: 600;
+}
+#first .promotion .swiper-pagination span:nth-of-type(1) {
+  color: #000;
+}
+#first .promotion .prom-control button {
+  position: relative;
+  display: inline-block;
+  background: url('../img/promotion_sprite.png') no-repeat;
+  background-position: left 33.33%;
+  margin-top: -2px;
+  width: 17px;
+  height: 20px;
+  cursor: pointer;
+}
+#first .promotion .prom-control button:nth-child(2) {
+  background-position: left 66.66%;
+}
+#first .promotion .prom-control button:nth-child(3) {
+  transform: rotate(180deg);
+}
+#first .promotion .prom-control button:nth-child(1):hover, #first .promotion .prom-control button:nth-child(3):hover {
+  background-position: left top;
 }
 #second {
   margin-top: 50px;
@@ -1360,6 +1430,12 @@ header {
   margin-top: 35px;
   margin-bottom: 30px;
 }
+#fourth .items:first-child .photolink-wrap .item:hover .photo-wrap img {
+  transform: scale(1.1);
+}
+#fourth .photolink-wrap .item:hover .sub .min-title {
+  text-decoration: underline;
+}
 #fourth .photolink-wrap .item:nth-child(2) {
   margin: 20px 0;
   padding: 20px 0;
@@ -1385,6 +1461,10 @@ header {
 }
 #fourth .photolink-wrap .item .photo-wrap img {
   width: 100%;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 #fourth .photolink-wrap .item .sub .ac-title {
   display: inline-block;
@@ -1419,6 +1499,7 @@ header {
   font-weight: 600;
   vertical-align: bottom;
   word-break: keep-all;
+  color: #1a1a1a;
 }
 #fourth .photolink-wrap .item .sub p {
   max-height: 66px;
@@ -1461,10 +1542,19 @@ header {
   font-weight: 300;
   line-height: 63px;
 }
+#fourth .link-wrap a:nth-child(even) {
+  border-left: 0;
+}
+#fourth .link-wrap a:nth-child(1), #fourth .link-wrap a:nth-child(2) {
+  border-bottom: 0;
+}
 #fourth .link-wrap a:before {
   content: '';
   position: absolute;
   background: url('../img/shortcut_arrow.png') no-repeat 30px center;
+}
+#fourth .link-wrap a:hover {
+  text-decoration: underline;
 }
 #fourth .items:nth-child(2) .title-wrap {
   /* overflow: hidden; */
@@ -1565,14 +1655,60 @@ header {
   padding: 19px 29px 19px 29px;
   padding-bottom: 30px;
   box-sizing: border-box;
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 #fourth .items:nth-child(2) .photolink-wrap .item .photo-wrap {
+  position: relative;
+  display: inline-block;
   width: 160px;
   height: 160px;
   background-color: #000;
   text-align: center;
   flex-shrink: 0;
   line-height: 160px;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item .photo-wrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background: #000;
+  z-index: 10;
+  transition-property: opacity, visibility;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item .photo-wrap:after {
+  content: '';
+  position: absolute;
+  background: url('../img/sns_sprite.png') no-repeat;
+  width: 36px;
+  height: 36px;
+  margin: auto;
+  opacity: 0;
+  background-position: left 78.92%;
+  top: 50%;
+  left: 50%;
+  z-index: 15;
+  transform: translate(-50%, -50%);
+  transition-property: opacity, visibility;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item:hover {
+  background-color: #f9fafc;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item:hover .photo-wrap:before {
+  opacity: .7;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item:hover .photo-wrap:after {
+  opacity: 1;
 }
 #fourth .items:nth-child(2) .photolink-wrap .item:nth-child(2) {
   margin: 0;
