@@ -878,7 +878,7 @@ header {
   width: 770px;
   border-radius: 40px;
 }
-#main .contents-wrap .swiper button {
+#main .contents-wrap .swiper .btn-pause-main {
   position: absolute;
   top: 11.5%;
   left: 24%;
@@ -891,6 +891,9 @@ header {
   background: url('../img/visual_sprite.png') no-repeat;
   background-position: left 37.97%;
   cursor: pointer;
+}
+#main .contents-wrap .swiper .btn-pause-main.on {
+  background-position: left 56.96%;
 }
 #main .contents-wrap .swiper .swiper-slide {
   border-radius: 40px;
@@ -1293,7 +1296,7 @@ header {
 }
 #first .promotion .swiper-pagination {
   position: absolute;
-  top: 30px;
+  top: 25px;
   bottom: 100%;
   left: 25%;
   letter-spacing: -.1em;
@@ -1306,7 +1309,7 @@ header {
 #first .promotion .swiper-pagination span:nth-of-type(1) {
   color: #000;
 }
-#first .promotion .prom-control button {
+#first .promotion .prom-control button, #first .promotion .prom-control .btn-pause-prom {
   position: relative;
   display: inline-block;
   background: url('../img/promotion_sprite.png') no-repeat;
@@ -1316,8 +1319,11 @@ header {
   height: 20px;
   cursor: pointer;
 }
-#first .promotion .prom-control button:nth-child(2) {
+#first .promotion .prom-control .btn-pause-prom {
   background-position: left 66.66%;
+}
+#first .promotion .prom-control .btn-pause-prom.on {
+  background-position: left 100%;
 }
 #first .promotion .prom-control button:nth-child(3) {
   transform: rotate(180deg);
@@ -1918,6 +1924,9 @@ header {
   transition-property: opacity, visibility;
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
+}
+#fourth .items:nth-child(2) .photolink-wrap .item .photo-wrap.youtube:after {
+  background-position: left 89.23%;
 }
 #fourth .items:nth-child(2) .photolink-wrap .item:hover {
   background-color: #f9fafc;

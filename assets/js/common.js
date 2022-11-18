@@ -51,7 +51,7 @@ $(function(){
     familySite.removeClass('on');
   })
   // ------------------------swiper---------------------------
-  var swiper = new Swiper(".mainSwiper", {
+  var swiperMain = new Swiper(".mainSwiper", {
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
@@ -69,7 +69,7 @@ $(function(){
     }
   });
 
-  var swiper = new Swiper(".promSwiper", {
+  var swiperProm = new Swiper(".promSwiper", {
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
@@ -87,7 +87,7 @@ $(function(){
     }
   });
 
-  var swiper = new Swiper(".f-bannerSwiper", {
+  var swiperFbanner = new Swiper(".f-bannerSwiper", {
     direction: "vertical",
     slidesPerView: 1,
     autoplay: {
@@ -102,6 +102,32 @@ $(function(){
       prevEl: ".swiper-button-prev.f-banner"
     }
   });
+
+  var sw1 = 0;
+  $('.btn-pause-main').click(function(){
+    if(sw1==0){
+        $(this).addClass('on');
+        swiperMain.autoplay.stop();
+        sw1 = 1;
+    }else{
+        $(this).removeClass('on');
+        swiperMain.autoplay.start();
+        sw1 = 0;
+    }
+  });
+  var sw2 = 0;
+  $('.btn-pause-prom').click(function(){
+    if(sw2==0){
+        $('.btn-pause-prom').addClass('on');
+        swiperProm.autoplay.stop();
+        sw2 = 1;
+    }else{
+        $('.btn-pause-prom').removeClass('on');
+        swiperProm.autoplay.start();
+        sw2 = 0;
+    }
+  });
+
 
 
     $('.slick-slider').slick({
