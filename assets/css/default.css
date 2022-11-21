@@ -460,23 +460,23 @@ header {
   bottom: 5px;
   background: url('../img/family_icon.png') no-repeat;
 }
-.gnb .content ul li:nth-child(1).gnb-active .lnb-wrap.lnb-active {
+.gnb .content ul li:nth-child(1) .lnb-wrap.lnb-active {
   height: 606.5px;
 }
-.gnb .content ul li:nth-child(2).gnb-active .lnb-wrap.lnb-active {
+.gnb .content ul li:nth-child(2) .lnb-wrap.lnb-active {
   height: 454.5px;
 }
-.gnb .content ul li:nth-child(3).gnb-active .lnb-wrap.lnb-active {
+.gnb .content ul li:nth-child(3) .lnb-wrap.lnb-active {
   height: 654.5px;
 }
-.gnb .content ul li:nth-child(4).gnb-active .lnb-wrap.lnb-active {
+.gnb .content ul li:nth-child(4) .lnb-wrap.lnb-active {
   height: 395.5px;
 }
-.gnb .content ul li:nth-child(5).gnb-active .lnb-wrap.lnb-active {
+.gnb .content ul li:nth-child(5) .lnb-wrap.lnb-active {
   height: 563.5px;
 }
-.gnb .content ul li:nth-child(6).gnb-active .lnb-wrap.lnb-active {
-  height: 381.5px;
+.gnb .content ul li:nth-child(6) .lnb-wrap.lnb-active {
+  height: 320px;
 }
 .lnb-wrap {
   position: absolute;
@@ -484,9 +484,7 @@ header {
   top: 60px;
   left: -50%;
   z-index: 100;
-  height: 0;
   width: 200%;
-  min-height: 350px;
   border-bottom: 1px solid #e5e7ee;
   background-color: #fff;
   box-shadow: 0 43px 30px rgb(25 53 116 / 12%);
@@ -515,6 +513,130 @@ header {
 }
 .lnb.long {
   width: 40%;
+}
+.gnb-second .lnb:nth-child(-n+5) {
+  min-height: 250px;
+}
+.gnb-fourth .lnb {
+  min-height: 200px;
+}
+.gnb-fifth .lnb:nth-child(-n+5) {
+  min-height: 220px;
+}
+.gnb-sixth .lnb-inner {
+  display: flex;
+}
+.gnb-sixth .lnb-left {
+  position: relative;
+  flex: 180px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.gnb-sixth .lnb-left img {
+  display: block;
+  padding-top: 35px;
+}
+.gnb-sixth .lnb-left p {
+  color: #7d7d7d;
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+}
+.gnb-sixth .lnb-right {
+  position: relative;
+}
+.gnb-sixth .lnb-right:before {
+  content: '';
+  position: absolute;
+  background: #f4f5f9;
+  top: 0;
+  left: 0;
+  bottom: -100%;
+  width: 100vw;
+  z-index: -1;
+}
+.gnb-sixth .lnb-right ul {
+  overflow: hidden;
+}
+.gnb-sixth .lnb-right ul li {
+  float: left;
+  display: inline-block;
+  padding: 30px 10px 0 10px;
+  width: calc(100% / 7);
+  box-sizing: border-box;
+}
+.gnb-sixth .lnb-right ul li a {
+    position: relative;
+    display: block;
+    color: #444;
+    font-size: 16px;
+    text-align: center;
+}
+.gnb-sixth .lnb-right ul li a span {
+  position: relative;
+  display: block;
+  width: 105px;
+  height: 85px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7ee;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.gnb-sixth .lnb-right ul li a span:after {
+  content: '';
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 52px;
+  height: 50px;
+  top: 18px;
+  left: 0;
+  right: 0;
+  background: url('../img/infopart_sprite.png') no-repeat;
+}
+.gnb-sixth .lnb-right ul li:nth-child(1) a span:after {
+  background-position: left top;
+}
+.gnb-sixth .lnb-right ul li:nth-child(2) a span:after {
+  background-position: left -50px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(3) a span:after {
+  background-position: left -100px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(4) a span:after {
+  background-position: left -150px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(5) a span:after {
+  background-position: left -200px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(6) a span:after {
+  background-position: left -250px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(7) a span:after {
+  background-position: left -300px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(8) a span:after {
+  background-position: left -350px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(9) a span:after {
+  background-position: left -400px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(10) a span:after {
+  background-position: left -450px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(11) a span:after {
+  background-position: left -500px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(12) a span:after {
+  background-position: left -550px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(13) a span:after {
+  background-position: left -600px;
+}
+.gnb-sixth .lnb-right ul li:nth-child(14) a span:after {
+  background-position: left -650px;
 }
 .lnb > div {
   display: block;
@@ -580,7 +702,7 @@ header {
   font-size: 15px;
   text-align: left;
   line-height: 28px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.1em;
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: linear;
