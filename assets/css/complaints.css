@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.con-btn {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.con-btn ul {
+  display: flex;
+}
+.con-btn ul li {
+  flex: 25%;
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  border: 1px solid #c5c9d6;
+  box-sizing: border-box;
+}
+.con-btn ul li + li {
+  border-left: none;
+}
+.con-btn ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  color: #444;
+  font-size: 16px;
+  line-height: 45px;
+  letter-spacing: -0.025em;
+  box-sizing: border-box;
+}

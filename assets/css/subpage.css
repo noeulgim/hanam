@@ -76,3 +76,219 @@ li.more > a:before {
   transition-duration: 0.25s;
   transition-timing-function: linear;
 }
+
+.contents {
+  margin-top: 40px;
+  margin-left: 50px;
+  width: 100%;
+  flex: 100%;
+}
+.con-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #7a7d96;
+  box-sizing: border-box;
+}
+.con-title h2 {
+  display: inline-block;
+  padding-top: 14px;
+  color: #1a1a1a;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -.1em;
+  font-family: inherit;
+}
+.title-right .menu-tree {
+  padding-top: 14px;
+  padding-bottom: 25px;
+  padding-right: 110px;
+  box-sizing: border-box;
+}
+.title-right .menu-tree ul {
+  overflow: hidden;
+}
+.title-right .menu-tree ul li {
+  float: left;
+  position: relative;
+  padding: 7px 0;
+  line-height: 0;
+}
+.title-right .menu-tree ul li + li {
+  padding-left: 16px;
+  margin-left: 16px;
+}
+.title-right .menu-tree ul li + li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  height: 7px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background: url('../img/breadcrumbs_arrow.png') no-repeat;
+}
+.title-right .menu-tree ul li a {
+  color: #7d7d7d;
+  font-size: 14px;
+  line-height: 18px;
+}
+.title-right .menu-tree ul li.active a {
+  color: #1a1a1a;
+}
+.title-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.icon-btn-wrap {
+  position: absolute;
+  width: 110px;
+  right: 0;
+  top: 9px;
+  line-height: 0;
+  font-style: 0;
+  text-align: right;
+}
+.icon-btn-wrap button {
+  background-color: #fff;
+  padding: auto;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c5c9d6;
+  border-radius: 13px;
+  box-sizing: border-box;
+  transition-property: border-color, background-color, box-shadow;
+}
+.icon-btn-wrap button + button {
+  margin-left: 10px;
+}
+.icon-btn-wrap button:before {
+  content: '';
+  position: absolute;
+  background: url('../img/share_sprite.png') no-repeat;
+  width: 15px;
+  height: 16px;
+  background-position: left top;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.icon-btn-wrap button:nth-of-type(2):before {
+  background: url('../img/print_sprite.png') no-repeat;
+  width: 17px;
+}
+
+.con-info {
+  position: relative;
+  border-top: 3px solid #7a7d96;
+  border-bottom: 4px solid #c5c9d6;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+.con-info:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 40px;
+  background-color: #7a7d96;
+}
+.con-info:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 170px;
+  height: 4px;
+  background: url('../img/sub_box_bg.png') repeat-x;
+}
+.menu-info {
+  position: relative;
+  padding: 40px 40px 40px 170px;
+}
+.menu-info:before {
+  content: '';
+  position: absolute;
+  background: url('../img/sub_box_default.png') no-repeat;
+  top: 30px;
+  left: 30px;
+  width: 100px;
+  height: 90px;
+}
+.menu-info h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #363c5a;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.menu-info .info-list p {
+  position: relative;
+  margin-bottom: 2px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  padding-left: 20px;
+  color: #636363;
+}
+.menu-info .info-list p:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #7a7d96;
+}
+
+.con-form {
+  margin-top: 30px;
+}
+.state-bar-wrap {
+  display: flex;
+  margin-bottom: 20px;
+}
+.state-bar {
+  flex: 50%;
+  border: 1px solid #9a9a9a;
+  position: relative;
+  vertical-align: middle;
+  height: 70px;
+  padding: 0 20px 0 65px;
+  color: #555;
+  background: #fff url('../img/icon_defOrder_3.png') 30px center no-repeat;
+  font-size: 17px;
+  font-weight: 500;
+}
+.state-bar + .state-bar {
+  border-left: none;
+}
+.state-bar.active:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 20px;
+  height: 72px;
+  background: url('../img/bg_stepArr_on.png') no-repeat;
+  z-index: 10;
+}
+.state-bar.active {
+  background: #318de7 url('../img/icon_defOrder_1_ov.png') 30px center no-repeat;
+  color: #fff;
+}
+.state-bar span {
+  display: inline-block;
+  line-height: 70px;
+  letter-spacing: -0.025em;
+}

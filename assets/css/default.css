@@ -1060,10 +1060,13 @@ header {
   height: 9px;
   background-position: left 29.05%;
 }
-#footer .banner .swiper-btn button:nth-child(2) {
+#footer .banner .swiper-btn .btn-pause-f-banner {
   width: 7px;
   height: 10px;
   background-position: left 62.06%;
+}
+#footer .banner .swiper-btn .btn-pause-f-banner.on {
+  background-position: left 80.53%;
 }
 #footer .banner .swiper-btn button:nth-child(3) {
   width: 13px;

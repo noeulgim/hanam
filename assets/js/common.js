@@ -127,6 +127,18 @@ $(function(){
         sw2 = 0;
     }
   });
+  var sw3 = 0;
+  $('.btn-pause-f-banner').click(function(){
+    if(sw2==0){
+        $(this).addClass('on');
+        swiperFbanner.autoplay.stop();
+        sw2 = 1;
+    }else{
+        $(this).removeClass('on');
+        swiperFbanner.autoplay.start();
+        sw2 = 0;
+    }
+  });
 
     $('.slick-slider').slick({
       slide: 'div:not(div.slick-line-hide)',        //슬라이드 되어야 할 태그
