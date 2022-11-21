@@ -60,6 +60,30 @@ h2 > span {
   display: block;
 }
 
+.scroll-btn {
+  /* opacity: 0;
+  visibility: hidden; */
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #7a7d96 url('../img/top.png') no-repeat center center;
+  font-size: 0;
+  line-height: 0;
+  transition-property: opacity, visibility, bottom, box-shadow;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+.scroll-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 header {
   width: 100%;
 }
@@ -144,7 +168,6 @@ header {
   background-position: 0 0;
   width: 34px;
   height: 34px;
-  border: 1px solid #e5e7ee;
   vertical-align: middle;
   cursor: pointer;
 }

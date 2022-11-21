@@ -128,8 +128,6 @@ $(function(){
     }
   });
 
-
-
     $('.slick-slider').slick({
       slide: 'div:not(div.slick-line-hide)',        //슬라이드 되어야 할 태그
       infinite : true,     //무한 반복 옵션
