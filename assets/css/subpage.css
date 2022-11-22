@@ -58,6 +58,7 @@ li.more.active > a:before {
   position: relative;
   border-radius: 4px;
   border: none;
+  text-align: -webkit-match-parent;
 }
 .side-list > ul > li.active {
   position: relative;
@@ -76,6 +77,7 @@ li.more.active > a:before {
   font-weight: 600;
   text-decoration: none;
   line-height: 22px;
+  letter-spacing: -.01em;
   word-break: keep-all;
   transition-property: background-color, color;
   transition-duration: .25s;
@@ -120,6 +122,7 @@ li.active > .list-in > ul > li {
   line-height: 22px;
   color: #444;
   word-wrap: break-word;
+  word-break: keep-all;
 }
 .list-in > ul > li.more.active > a {
   color: #111d68;
@@ -171,6 +174,7 @@ li.active > .list-in > ul > li {
 }
 .list-in-in > ul > li > a {
   position: relative;
+  display: inline-block;
   padding-right: 20px;
   padding-left: 20px;
   color: #7d7d7d;
@@ -178,7 +182,7 @@ li.active > .list-in > ul > li {
   font-weight: 300;
   line-height: 20px;
   word-wrap: break-word;
-  word-break: break-all;
+  word-break: keep-all;
 }
 .list-in-in > ul > li.active > a {
   color: #111d68;
@@ -210,6 +214,19 @@ li.active > .list-in > ul > li {
 }
 .list-in > ul > li.active .list-in-in > ul > li.active > a:before {
   background-color: #111d68;
+}
+.list-in-in > ul > li > a.link:after {
+  content: '';
+  position: absolute;
+  background: url('../img/menu_sprite.png') no-repeat;
+  top: 5px;
+  right: 5px;
+  bottom: auto;
+  width: 12px;
+  height: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-position: left 100%;
 }
 
 .contents {
@@ -271,6 +288,9 @@ li.active > .list-in > ul > li {
   font-size: 14px;
   line-height: 18px;
 }
+.title-right .menu-tree ul li a:hover {
+  text-decoration: underline;
+}
 .title-right .menu-tree ul li.active a {
   color: #1a1a1a;
 }
@@ -298,6 +318,14 @@ li.active > .list-in > ul > li {
   border-radius: 13px;
   box-sizing: border-box;
   transition-property: border-color, background-color, box-shadow;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+  cursor: pointer;
+}
+.icon-btn-wrap button:hover {
+  border-color: #363c5a;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(17 29 104 / 15%);
 }
 .icon-btn-wrap button + button {
   margin-left: 10px;
@@ -321,13 +349,17 @@ li.active > .list-in > ul > li {
 }
 
 .con-info {
+  margin-bottom: 50px;
+}
+.con-info.white {
   position: relative;
   border-top: 3px solid #7a7d96;
   border-bottom: 4px solid #c5c9d6;
   box-sizing: border-box;
   margin-top: 50px;
+  margin-bottom: 0;
 }
-.con-info:before {
+.con-info.white:before {
   content: '';
   position: absolute;
   right: 0;
@@ -336,7 +368,7 @@ li.active > .list-in > ul > li {
   height: 40px;
   background-color: #7a7d96;
 }
-.con-info:after {
+.con-info.white:after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -348,33 +380,47 @@ li.active > .list-in > ul > li {
 .menu-info {
   position: relative;
   padding: 40px 40px 40px 170px;
+  min-height: 150px;
+  background: #f7f8fa;
+  box-sizing: border-box;
+}
+.con-info.white .menu-info {
+  background: #fff;
 }
 .menu-info:before {
   content: '';
   position: absolute;
-  background: url('../img/sub_box_default.png') no-repeat;
   top: 30px;
   left: 30px;
   width: 100px;
   height: 90px;
 }
-.menu-info h3 {
+.con-info .menu-info h3 {
+  margin-top: 0;
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 500;
   color: #363c5a;
   line-height: 24px;
+}
+.con-info.white .menu-info h3 {
+  font-weight: 700;
   margin-bottom: 20px;
 }
-.menu-info .info-list p {
-  position: relative;
-  margin-bottom: 2px;
+.con-info .menu-info .info-list p {
+  margin-top: 10px;
   font-size: 16px;
   font-weight: 300;
+  color: #636363;
+  line-height: 24px;
+}
+.con-info.white .menu-info .info-list p {
+  position: relative;
+  margin-bottom: 2px;
+  margin-top: 0;
   line-height: 28px;
   padding-left: 20px;
-  color: #636363;
 }
-.menu-info .info-list p:before {
+.con-info.white .menu-info .info-list p:before {
   content: '';
   position: absolute;
   left: 0;
@@ -432,6 +478,8 @@ li.active > .list-in > ul > li {
 
 .priv-check-wrap {
   margin: 0 auto;
+  z-index: 10;
+  background: #fff;
 }
 .priv-check-wrap p {
   color: #555;
@@ -439,16 +487,39 @@ li.active > .list-in > ul > li {
   letter-spacing: -0.025em;
 }
 .title-box {
+  position: relative;
   margin-top: 30px;
   padding: 17px 15px;
   background: #f4f5f9;
   border-top: 1px solid #c4c9ce;
   box-sizing: border-box;
+  z-index: 10;
 }
 .title-box p {
+  position: relative;
   color: #111;
   font-weight: 500;
   font-size: 19px;
+  padding-right: 35px;
+}
+.certf-wrap .title-box button {
+  position: absolute;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  top: 11px;
+  margin-right: 15px;
+  background: url('../img/btn_slideArrow.png') no-repeat;
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+  cursor: pointer;
+  z-index: 10;
+}
+.certf-wrap .title-box.off button {
+  transform: rotate(0deg);
 }
 .box-wrap {
   border-bottom: 1px solid #000;
@@ -456,6 +527,8 @@ li.active > .list-in > ul > li {
   height: 240px;
   overflow-y: auto;
   box-sizing: border-box;
+  background: #fff;
+  z-index: 10;
 }
 .box-cont + .box-cont {
   margin-top: 30px;
@@ -489,12 +562,18 @@ li.active > .list-in > ul > li {
   color: #555;
   font-size: 15px;
 }
+.ess-check span {
+  display: inline-block;
+  cursor: pointer;
+}
 .warn-text {
   position: relative;
   margin-bottom: 7px;
   padding-left: 15px;
   line-height: 1.5;
   text-align: left;
+  background: #fff;
+  z-index: 100;
 }
 .warn-text:before {
   content: '';
@@ -511,8 +590,36 @@ li.active > .list-in > ul > li {
   letter-spacing: -.025em;
 }
 .certf-btn-wrap {
+  position: relative;
   padding: 20px;
   box-sizing: border-box;
+  display: inline-block;
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 10;
+  /* visibility: visible; */
+  transition-property: padding;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.title-box.off + .certf-btn-wrap {
+  padding-top: 0;
+}
+.certf-btn-wrap:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  transition-property: top;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.title-box.off + .certf-btn-wrap:before {
+  top: 0;
 }
 .certf-btn {
   padding: 25px 10px 25px 75px;
@@ -526,6 +633,7 @@ li.active > .list-in > ul > li {
   margin-left: 0;
   margin-top: 1%;
   box-sizing: border-box;
+  z-index: 0;
   cursor: pointer;
 }
 .certf-btn:nth-child(even) {
@@ -605,6 +713,7 @@ li.active > .list-in > ul > li {
   font-size: 14px;
   min-width: 70px;
   margin: 0;
+  cursor: pointer;
   border-width: 1px;
   border-style: solid;
   border-color: #7a7d96;
@@ -619,7 +728,7 @@ li.active > .list-in > ul > li {
   transition-timing-function: ease-in-out;
   vertical-align: middle;
 }
-.homepage-wrap button:hover {
+.homepage-wrap button:hover, .opinion input[type="submit"]:hover {
   border-color: #363c5a;
   box-shadow: 0 0 20px rgb(17 29 104 / 15%);
 }
@@ -703,6 +812,23 @@ li.active > .list-in > ul > li {
   border-radius: 50%;
   background-color: #fff;
   box-sizing: border-box;
+}
+.satisfy-radio label:after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  background: #e5e7ee;
+  border-radius: 50%;
+}
+.satisfy-radio input:checked + label:before {
+  background: #363c5a;
+  border: 1px solid #363c5a;
+}
+.satisfy-radio input:checked + label:after {
+  background: #fff;
 }
 .opinion {
   padding: 0 20px 15px;
@@ -799,4 +925,30 @@ li.active > .list-in > ul > li {
   height: 15px;
   background: url('../img/manager_sprite.png') no-repeat;
   background-position: left top -76px;
+}
+.info-wrap .text-bubble {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: -34px;
+  padding: 9px 18px;
+  border-radius: 19px;
+  border: 1px solid #7a7d96;
+  background-color: #fff;
+}
+.info-wrap .text-bubble.on {
+  display: block;
+}
+.info-wrap .text-bubble:before {
+  content: '';
+  position: absolute;
+  background: url('../img/kogl_item.png') no-repeat;
+  right: 26px;
+  bottom: -6px;
+  width: 8px;
+  height: 6px;
+}
+.info-wrap .text-bubble p {
+  font-size: 14px;
+  line-height: 20px;
 }

@@ -1155,3 +1155,7 @@ header {
   top: -10px;
   right: 0;
 }
+
+@media screen and (max-width: 1400px) {
+  html,body { overflow-x: auto; max-width: 1400px; }
+}

@@ -76,6 +76,26 @@ $(function(){
         }
       });
     });
+
+    var count = 0;
+    $('.close-btn').click(function(){
+      if( count == 0 ){
+        $('.title-box').addClass('off');
+        count = 1;
+      }else{
+        $('.title-box').removeClass('off');
+        count = 0;
+      }
+    });
+    $('.right button').click(function(){
+      if(count == 0){
+        $('.text-bubble').addClass('on');
+        count = 1;
+      }else{
+        $('.text-bubble').removeClass('on');
+        count = 0;
+      }
+    })
   });
   // ------------------------swiper---------------------------
   var swiperMain = new Swiper(".mainSwiper", {

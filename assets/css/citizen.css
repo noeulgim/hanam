@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+.menu-info:before {
+  background: url('../img/notice_box_icon1.png') no-repeat;
+}
