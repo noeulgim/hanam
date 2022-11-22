@@ -77,7 +77,10 @@ li.more.active > a:before {
   text-decoration: none;
   line-height: 22px;
   word-break: keep-all;
-  transition-property: background, color;
+  transition-property: background-color, color;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+
 }
 .side-list > ul > li.active > a {
   background-color: #437dea;
@@ -85,22 +88,27 @@ li.more.active > a:before {
   border-radius: 0;
   color: #fff;
 }
-.side-list > ul > li + li > a {
+.side-list > ul > li + li {
   margin-top: 5px;
 }
 .list-in {
-  /* opacity: 0;
-  visibility: hidden; */
-  /* height: 0; */
-  padding: 12px 20px;
-  transition-property: visibility, opacity, background-color, padding;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition-property: visibility, opacity, background-color, height;
   transition-duration: 0.25s;
   transition-timing-function: linear;
+}
+li.active > .list-in {
+  opacity: 1;
+  visibility: visible;
+  padding: 12px 20px;
+  height: 100%;
 }
 .list-in a:hover {
   text-decoration: underline;
 }
-.list-in > ul > li {
+li.active > .list-in > ul > li {
   margin-top: 10px;
 }
 .list-in > ul > li > a {
@@ -113,16 +121,19 @@ li.more.active > a:before {
   color: #444;
   word-wrap: break-word;
 }
-.list-in > ul > li.more > a {
+.list-in > ul > li.more.active > a {
   color: #111d68;
 }
-.list-in > ul > li > a:before {
+.list-in > ul > li.more > a:before {
+  content: '';
+  position: absolute;
+  background: url('../img/menu_sprite.png') no-repeat;
+  background-position: left 31.57%;
+  width: 10px;
+  height: 10px;
   right: 0;
 }
 .list-in > ul > li.more.active > a:before {
-  background: url('../img/menu_sprite.png') no-repeat;
-  width: 10px;
-  height: 10px;
   background-position: left 71.05%;
 }
 .list-in > ul > li > a:after {
@@ -134,6 +145,20 @@ li.more.active > a:before {
   height: 4px;
   border-radius: 50%;
   background-color: #c5c9d6;
+}
+.list-in-in {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  transition-property: visibility, opacity, height;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+}
+.list-in > ul > li.more.active .list-in-in {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
 }
 .list-in-in > ul {
   margin-top: 10px;
@@ -170,6 +195,12 @@ li.more.active > a:before {
   width: 0;
   height: 0;
   background-color: #c5c9d6;
+}
+.list-in-in > ul > li.active > a:before {
+  opacity: 1;
+  visibility: visible;
+  width: 5px;
+  height: 1px;
 }
 .list-in > ul > li.active .list-in-in > ul > li > a:before {
   opacity: 1;

@@ -50,6 +50,33 @@ $(function(){
   $('.family-site button').click(function(){
     familySite.removeClass('on');
   })
+
+  $('.side-list > ul > li.more > a').each(function(){
+    var count = 0;
+    $(this).click(function(){
+      if( count == 0 ) {
+        $('.side-list > ul > li.more').removeClass('active');
+        $(this).parent('.more').addClass('active');
+        count = 1;
+      }else {
+        $(this).parent('.more').removeClass('active');
+        count = 0;
+      }
+    });
+    $('.list-in > ul > li.more > a').each(function(){
+      var count = 0;
+      $(this).click(function(){
+        if( count == 0 ){
+          $('.list-in > ul > li.more').removeClass('active');
+          $(this).parent('.more').addClass('active');
+          count = 1;
+        }else {
+          $(this).parent('.more').removeClass('active');
+          count = 0;
+        }
+      });
+    });
+  });
   // ------------------------swiper---------------------------
   var swiperMain = new Swiper(".mainSwiper", {
     autoplay: {
