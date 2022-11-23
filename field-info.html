@@ -1132,6 +1132,17 @@
               map.setCenter(coords3);
           }
         });
+
+        function zoomOut() {
+    // 현재 지도의 레벨을 얻어옵니다
+    var level = map.getLevel();
+
+    // 지도를 1레벨 올립니다 (지도가 축소됩니다)
+    map.setLevel(level + 4);
+
+    // 지도 레벨을 표시합니다
+    displayLevel();
+}
 // 마커를 표시할 위치와 title 객체 배열입니다
 // var positions = [
 //     {
