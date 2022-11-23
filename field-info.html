@@ -1071,10 +1071,7 @@ geocoder.addressSearch('경기 하남시 감일순환로 95-3 지하1층, 1층',
         var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
         // 결과값으로 받은 위치를 마커로 표시합니다
-        var marker = new kakao.maps.Marker({
-            map: map,
-            position: coords
-        });
+
 
         // 인포윈도우로 장소에 대한 설명을 표시합니다
         var infowindow = new kakao.maps.InfoWindow({
