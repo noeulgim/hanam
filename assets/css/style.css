@@ -1,37 +1,6 @@
 @charset "UTF-8";
 @font-face{font-weight:400; font-family:'DWImpactamin'; src:url("../font/DWImpactamin.woff2") format('woff2'),url("/common_2020/fonts/DWImpactamin.woff") format('woff');}
-.covid .covid_title,
-.visual .visual_title,
-h2,
-.character p,
-.board .board_title,
-.fact .fact_title,
-.promotion .promotion_title,
-.favorite .favorite_title,
-.service .service_slogan,
-.photo .photo_title,
-.sns .sns_title{font-weight:400; font-family:'DWImpactamin', sans-serif;}
 
-html,body { height: 100%; letter-spacing: -.1em; overflow-x: hidden; min-width: 1330px; }
-html,body,ul,li,h1,h2,h3,h4,h5,h6,p {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-ul,ol { list-style: none; }
-a { text-decoration: none; color: #7d7d7d; }
-button { border: none; background: none; padding: 0; }
-li { color: #7d7d7d; }
-
-h2 {
-  color: #ec6c61;
-  font-size: 30px;
-  line-height: 41px;
-  letter-spacing: -0.025em;
-}
-h2 > span {
-  color: #111d68;
-}
 .flex-wrap {
   display: flex;
 }

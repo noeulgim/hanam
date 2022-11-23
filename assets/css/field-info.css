@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+th {
+  color: #363c5a;
+}
+td {
+  color: #636363;
+}
+td.page a {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding-right: 22px;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-style: dotted;
+  text-decoration-color: #999;
+}
+td.page a:hover {
+  color: #437dea;
+}
+td.page a:after {
+  content: '';
+  position: absolute;
+  background: url('../img/btn_icon_sprite.png') no-repeat;
+  width: 16px;
+  height: 16px;
+  right: 0;
+  margin-left: 6px;
+  vertical-align: -2px;
+  background-position: left 28.57%;
+}
+.info-table tr td:nth-child(1) {
+  background-color: #fff;
+}

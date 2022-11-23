@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  <title>하남시청</title>
+  <title>부서안내/직원검색(조직도) - 하남시청</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/default.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/subpage.css">
+  <link rel="stylesheet" href="./assets/css/introduce.css">
   <script src="./assets/js/jquery_3.5.1.js"></script>
   <script src="./assets/js/common.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -16,9 +17,9 @@
 </head>
 
 <body>
-  <div class="scroll-btn-wrap">
+  <!-- <div class="scroll-btn-wrap">
     <button class="scroll-btn"></button>
-  </div>
+  </div> -->
   <div id="wrapper">
     <header id="header">
       <div class="header-top-wrap">
@@ -600,7 +601,365 @@
       </nav>
     </div>
   </header>
-
+  <div class="wrap">
+    <article class="left-menu">
+      <div class="side-title">
+        <p>종합민원</p>
+      </div>
+      <div class="side-list">
+        <ul>
+          <li class="more active">
+            <a href="#">민원신청</a>
+            <div class="list-in">
+              <ul>
+                <li class="more active">
+                  <a href="#">민원 신청 및 조회</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li class="active"><a href="#">민원신청</a></li>
+                      <li><a href="#">나의민원보기</a></li>
+                      <li><a href="#">(구)전자민원열람</a></li>
+                      <li><a href="#">민원처리공개</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">정부24(온라인 민원발급)</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="more">
+            <a href="#">민원안내</a>
+            <div class="list-in">
+              <ul>
+                <li class="more">
+                  <a href="#">민원실 안내</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">사회적배려창구</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="more">
+                  <a href="#">원스톱서비스</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">폐업신고 원스톱서비스</a></li>
+                      <li><a href="#">혼인·전입신고 원스톱서비스</a></li>
+                      <li><a href="#">안심상속 원스톱서비스</a></li>
+                      <li><a href="#">행복출산 원스톱서비스</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">콜센터</a></li>
+                <li><a href="#">여권안내</a></li>
+                <li class="more">
+                  <a href="#">가족관계등록신고</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">가족관계등록신고안내</a></li>
+                      <li class="site"><a href="#">가족관계등록신고양식</a></li>
+                      <li class="site"><a href="#" class="link">신고서 작성방법(출생·혼인·사망·이혼)</a></li>
+                      <li class="site"><a href="#" class="link">가족관계증명서발급</a></li>
+                      <li><a href="#">인터넷신고</a></li>
+                      <li class="site"><a href="#" class="link">자주하는 질문</a></li>
+                      <li class="site"><a href="#" class="link">수원지방법원 성남지원</a></li>
+                      <li><a href="#">인근 가족관계등록관서 안내</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">어디서나 민원</a></li>
+                <li><a href="#">행정서비스현장</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">민원편람/서식</a>
+          </li>
+          <li class="more">
+            <a href="#">민원편의제도</a>
+            <div class="list-in">
+              <ul>
+                <li><a href="#">무인민원발급기 안내</a></li>
+                <li class="more">
+                  <a href="#">복합민원전문상담관제</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">복합민원전문상담관제 안내</a></li>
+                      <li><a href="#">복합민원전문상담관제 신청내역(구)</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="more">
+                  <a href="#">복합민원 상담예약</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">복합민원 상담예약 안내</a></li>
+                      <li><a href="#">복합민원 상담예약 신청내역</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">민원1회 방문처리제</a></li>
+                <li><a href="#">민원후견인제도</a></li>
+                <li><a href="#">사전심사제</a></li>
+                <li class="more">
+                  <a href="#">하남시 옴브즈만</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">하남시 옴부즈만 소개</a></li>
+                      <li><a href="#">고충민원 신청 및 처리 안내</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">민원만족도평가결과</a>
+          </li>
+          <li class="more">
+            <a href="#">정보통신공사 민원업무</a>
+            <div class="list-in">
+              <ul>
+                <li><a href="#">사용전검사 및 감리결과 신고</a></li>
+                <li><a href="#">민원 처리현황 조회 및 인터넷 발급</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="more">
+            <a href="#">사이버신고센터</a>
+            <div class="list-in">
+              <ul>
+                <li><a href="#">안전신문고</a></li>
+                <li class="more">
+                  <a href="#">환경신문고</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">환경신문고 안내</a></li>
+                      <li><a href="#">환경신문고 게시판</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="more">
+                  <a href="#">아동권리침해신고</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">아동권리 침해 신고 안내</a></li>
+                      <li><a href="#">아동권리침해신고</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">기업애로신청</a></li>
+                <li><a href="#">불법중개행위신고</a></li>
+                <li><a href="#">공익신고</a></li>
+                <li class="more">
+                  <a href="#">공직자부조리신고</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">공직자부조리/소극행정 신고 안내</a></li>
+                      <li><a href="#">공직자부조리/소극행정 신고 게시판</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="more">
+                  <a href="#">예산낭비신고</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">예산낭비신고센터</a></li>
+                      <li><a href="#">예산낭비절감제안</a></li>
+                      <li><a href="#">나의신고/제안보기</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">지방세납세자보호관</a></li>
+                <li class="more">
+                  <a href="#">규제개혁신고</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">규제개혁신고 안내</a></li>
+                      <li><a href="#">규제개혁신고 게시판</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">지방기업 규제개혁신문고</a></li>
+                <li><a href="#">국무조정실 규제개혁신문고</a></li>
+                <li><a href="#">홈페이지 오류신고</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="more">
+            <a href="#">법무/법률서비스</a>
+            <div class="list-in">
+              <ul>
+                <li><a href="#">입법예고</a></li>
+                <li><a href="#">자치법규</a></li>
+                <li class="more">
+                  <a href="#">무료법률상담</a>
+                  <div class="list-in-in">
+                    <ul>
+                      <li><a href="#">무료법률상담 안내</a></li>
+                      <li><a href="#">일반 법률 분야 상담하기</a></li>
+                      <li><a href="#">노무/세무 분야 상담하기</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">행정심판</a></li>
+                <li><a href="#">국가배상</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="contents">
+      <div class="con-title">
+        <h2>부서안내/직원검색(조직도)</h2>
+        <div class="title-right">
+          <div class="menu-tree">
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">하남소개</a></li>
+              <li><a href="#">시청안내</a></li>
+              <li class="active"><a href="#">부서안내/직원검색(조직도)</a></li>
+            </ul>
+          </div>
+          <div class="icon-btn-wrap">
+            <button class="share-icon"></button>
+            <button class="print-icon"></button>
+          </div>
+        </div>
+      </div>
+      <div class="con-info white">
+        <div class="menu-info">
+          <h3>부서안내 및 직원검색</h3>
+          <div class="info-list">
+            <p>하남시청 부서안내 및 하남시 행정복지센터조직을 안내합니다.</p>
+            <span>각 조직을 클릭하면 상세정보를 확인 할 수 있습니다.</span>
+          </div>
+        </div>
+      </div>
+      <div class="con-form">
+        <div class="state-bar-wrap">
+          <div class="write state-bar active">
+            <span>1 신청서 작성</span>
+          </div>
+          <div class="complete state-bar">
+            <span>2 신청완료</span>
+          </div>
+        </div>
+        <div class="priv-check-wrap">
+          <div class="title-box">
+            <p>개인 정보 수집 및 이용 안내</p>
+          </div>
+          <div class="box-wrap">
+            <div class="box-cont">
+              <p class="main-t">1. 개인정보의 수집 및 이용 목적(「개인정보 보호법」 제15조)</p>
+              <p>국민신문고는 관계법령 등에서 정하는 소관 업무의 수행을 위하여 다음과 같이 개인정보를 수집 및 이용합니다. 수집된 개인정보는 정해진 목적 이외의 용도로는 이용되지 않으며 수집 목적이 변경될 경우 사전에 알리고 동의를 받을 예정입니다.</p>
+              <p class="num-t">가. 접수·처리·사후관리 서비스 제공<br>신청서에 포함된 개인정보는 민원의 접수·처리 등 소관 업무 수행을 위해 행정기관에서 이용합니다.</p>
+              <p class="num-t">나. 타 행정·공공기관 시스템 이용<br>민원의 전자적 처리를 위해 내부적으로 타 시스템 연계 및 이용 시 개인정보를 이용합니다.</p>
+              <p class="num-t">다. 국민신문고 정책지원<br>접수된 민원은 국민신문고 서비스 향상 및 정책평가를 위하여 관계 법령에 따라 분석·평가 및 처리결과의 사후관리를 시행합니다.</p>
+            </div>
+            <div class="box-cont">
+              <p class="main-t">2. 수집하는 개인정보의 항목(「개인정보 보호법」 제15조)</p>
+              <p class="num-t">가. 공통(민원/제안/예산낭비신고) 개인정보 항목</p>
+              <p class="num-t">성명, 주소, 연락처, 휴대전화번호(진행상황 통지 등을 휴대전화로 받고 싶은 경우), 전자우편(진행상황이나 처리결과 통지를 전자우편으로 받고 싶은 경우)</p>
+              <p class="num-t">나. 자동수집항목: IP(Internet Protocol)주소, 이용내용의 기록</p>
+              <p class="num-t">나. 민원<br>- 필수 : 피신고자정보(성명‧주소‧근무처‧연락처, 갑질 피해 또는 제보‧고발성 민원의 경우), 생년월일(병무청 민원)<br>- 선택 : 성별, 생년월일</p>
+            </div>
+            <div class="box-cont">
+              <p class="main-t">3. 개인정보의 보유 및 이용기간(「공공기록물 관리에 관한 법률 시행령」 제26조)</p>
+              <p>국민신문고는 원칙적으로 개인정보 보존기간이 경과하거나, 처리목적이 달성된 경우에는 지체 없이 개인정보를 파기합니다. 다만, 다른 법령에 따라 보존하여야 하는 경우에는 그러하지 않을 수 있습니다.</p>
+              <p class="num-t">성명, 주소, 연락처, 휴대전화번호(진행상황 통지 등을 휴대전화로 받고 싶은 경우), 전자우편(진행상황이나 처리결과 통지를 전자우편으로 받고 싶은 경우)</p>
+              <p class="num-t">가. 민원, 국민제안, 예산낭비신고 등 : 10년</p>
+              <p class="num-t">나. 회원정보 : 탈퇴 즉시 파기</p>
+              <p class="num-t">다. 자동수집항목 중 IP주소 : 1년</p>
+            </div>
+            <div class="box-cont">
+              <p class="main-t">4. 동의를 거부할 권리가 있다는 사실 및 동의 거부에 따른 불이익 내용(「개인정보 보호법」 제16조)</p>
+              <p>개인정보 수집·이용에 동의를 거부하실 수 있으며, 동의를 거부하시는 경우에는 국민신문고 서비스 이용이 제한됩니다.</p>
+            </div>
+          </div>
+          <label for="ess-check" class="ess-check">
+            <input type="checkbox" id="ess-check"><span>필수항목 동의</span>
+          </label>
+          <div class="warn-text">
+            <p>국민신문고를 사칭하여 금융정보를 요구하는 사기전화(보이스 피싱) 사례가 발생하고 있습니다. 행정기관에서 전화로 금융정보 등을 요구하는 경우는 없으니 피해가 발생하지 않도록 주의하시기 바랍니다.</p>
+          </div>
+        </div>
+        <div class="certf-wrap">
+          <div class="title-box">
+            <p>본인 인증(비회원 로그인)</p>
+            <button class="close-btn"></button>
+          </div>
+          <div class="certf-btn-wrap">
+            <button class="certf-btn">간편인증 로그인</button>
+            <button class="certf-btn">아이핀</button>
+            <button class="certf-btn">금융인증서</button>
+            <button class="certf-btn">공동인증서(구 공인인증서)</button>
+            <button class="certf-btn">휴대전화</button>
+            <button class="certf-btn">외국인등록번호</button>
+          </div>
+        </div>
+      </div>
+      <div class="homepage-wrap">
+        <div class="main-t"><span>홈페이지</span></div>
+        <span>국민신문고 홈페이지 (www.epeople.go.kr) 에서도 민원신청이 가능합니다.</span>
+        <button><a href="#">홈페이지</a></button>
+      </div>
+      <div class="bottom-wrap">
+        <div class="satisfy-wrap">
+          <div class="satisfy-check">
+            <span>현재 페이지에서 제공하는 정보와 편의성에 대하여 만족하시나요?</span>
+            <div class="satisfy-radio">
+              <span>
+                <input type="radio" name="satisfy" id="exgood">
+                <label for="exgood">매우만족
+                </label>
+              </span>
+              <span>
+                <input type="radio" name="satisfy" id="good">
+                <label for="good">만족</label>
+              </span>
+              <span>
+                <input type="radio" name="satisfy" id="normal">
+                <label for="normal">보통</label>
+              </span>
+              <span>
+                <input type="radio" name="satisfy" id="bad">
+                <label for="bad">불만족</label>
+              </span>
+              <span>
+                <input type="radio" name="satisfy" id="exbad">
+                <label for="exbad">매우불만족</label>
+              </span>
+            </div>
+          </div>
+          <div class="opinion">
+            <form action="">
+              <input type="text" name="" value="" placeholder="의견을 입력해 주세요">
+              <input type="submit" name="" value="의견등록하기">
+            </form>
+          </div>
+        </div>
+        <div class="info-wrap">
+          <div class="informs">
+            <ul>
+              <li><span>정보관리</span>민원여권과 민원팀</li>
+              <li><span>전화번호</span>031-790-6131</li>
+              <li><span>최종수정일</span>2021.12.31</li>
+            </ul>
+          </div>
+          <div class="right">
+            <button>
+              <img src="./assets/img/img_opencode3.jpg" alt="">
+            </button>
+          </div>
+          <div class="text-bubble">
+            <p>본 저작물은 공공누리 제3유형 : 출처표시 + 변경금지" 조건에 따라 이용할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
   <footer id="footer">
     <div class="banner">
       <div class="banner-logo">
