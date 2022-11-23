@@ -1068,21 +1068,67 @@ geocoder.addressSearch('경기 하남시 감일순환로 95-3 지하1층, 1층',
     // 정상적으로 검색이 완료됐으면
      if (status === kakao.maps.services.Status.OK) {
 
-        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+        var coords1 = new kakao.maps.LatLng(result[0].y, result[0].x);
 
         // 결과값으로 받은 위치를 마커로 표시합니다
-
+        var marker1 = new kakao.maps.Marker({
+            map: map,
+            position: coords1
+        });
 
         // 인포윈도우로 장소에 대한 설명을 표시합니다
         var infowindow = new kakao.maps.InfoWindow({
-            content: '<div style="width:150px;text-align:center;padding:6px 0;">하남시감일종합사회복지관</div>'
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">우리회사</div>'
         });
-        infowindow.open(map, marker);
+        infowindow.open(map, marker1);
 
         // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
         map.setCenter(coords);
     }
-});
+geocoder.addressSearch('경기 하남시 덕풍천서로 9', function(result, status) {
+
+    // 정상적으로 검색이 완료됐으면
+     if (status === kakao.maps.services.Status.OK) {
+
+        var coords2 = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+        // 결과값으로 받은 위치를 마커로 표시합니다
+        var marker2 = new kakao.maps.Marker({
+            map: map,
+            position: coords2
+        });
+
+        // 인포윈도우로 장소에 대한 설명을 표시합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">우리회사</div>'
+        });
+        infowindow.open(map, marker2);
+
+        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+        map.setCenter(coords);
+    }
+geocoder.addressSearch('경기 하남시 아리수로 565 1301동 1층', function(result, status) {
+
+    // 정상적으로 검색이 완료됐으면
+     if (status === kakao.maps.services.Status.OK) {
+
+        var coords3 = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+        // 결과값으로 받은 위치를 마커로 표시합니다
+        var marker3 = new kakao.maps.Marker({
+            map: map,
+            position: coords3
+        });
+
+        // 인포윈도우로 장소에 대한 설명을 표시합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">우리회사</div>'
+        });
+        infowindow.open(map, marker3);
+
+        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+        map.setCenter(coords);
+    }
 
 // 마커를 표시할 위치와 title 객체 배열입니다
 var positions = [
