@@ -48,6 +48,11 @@ li.more > a:before {
   bottom: 0;
   margin: auto 0;
 }
+li.more.site a:before {
+  background-position: left 100%;
+  width: 12px;
+  height: 12px;
+}
 li.more.active > a:before {
   background-position: left 51.31%;
 }
@@ -187,7 +192,7 @@ li.active > .list-in > ul > li {
 .list-in-in > ul > li.active > a {
   color: #111d68;
 }
-.list-in-in > ul > li > a:before {
+.list-in-in > ul > li > a:after {
   content: '';
   position: absolute;
   display: block;
@@ -200,27 +205,27 @@ li.active > .list-in > ul > li {
   height: 0;
   background-color: #c5c9d6;
 }
-.list-in-in > ul > li.active > a:before {
+.list-in-in > ul > li.active > a:after {
   opacity: 1;
   visibility: visible;
   width: 5px;
   height: 1px;
 }
-.list-in > ul > li.active .list-in-in > ul > li > a:before {
+.list-in > ul > li.active .list-in-in > ul > li > a:after {
   opacity: 1;
   visibility: visible;
   width: 5px;
   height: 1px;
 }
-.list-in > ul > li.active .list-in-in > ul > li.active > a:before {
+.list-in > ul > li.active .list-in-in > ul > li.active > a:after {
   background-color: #111d68;
 }
-.list-in-in > ul > li > a.link:after {
+ul > li.site > a.link:before {
   content: '';
   position: absolute;
   background: url('../img/menu_sprite.png') no-repeat;
   top: 5px;
-  right: 5px;
+  right: 0;
   bottom: auto;
   width: 12px;
   height: 12px;
