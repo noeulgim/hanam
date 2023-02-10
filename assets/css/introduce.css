@@ -4,6 +4,105 @@
   border-top: 0;
   margin-top: 0;
 }
+.con-info.white .menu-info .info-list p {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 10px;
+  line-height: 24px;
+  display: inline-block;
+}
+.con-info.white .menu-info .info-list p:before {
+  display: none;
+}
+.con-info.white .menu-info .info-list span {
+  color: #437dea;
+  font-weight: 600;
+}
+
+.con-search {
+  display: flex;
+  border: 3px solid #c5c9d6;
+  margin-top: 50px;
+  overflow: hidden;
+  padding: 30px;
+  box-sizing: border-box;
+  line-height: 42px;
+}
+.con-search h3 {
+  display: inline-block;
+  width: 120px;
+  line-height: 42px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #28348a;
+  letter-spacing: -.03em;
+}
+.input-text {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  border-left: 1px dotted #a4a5aa;
+}
+.input-text ul {
+  position: relative;
+  float: left;
+}
+.input-text ul li {
+  float: left;
+  display: inline-block;
+  line-height: 46px;
+}
+.input-text ul li + li {
+  margin-left: 15px;
+}
+.input-text label {
+  display: inline-block;
+  width: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #363c5a;
+  letter-spacing: -.03em;
+}
+.input-text input {
+  max-width: 125px;
+  margin: 2px 5px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #c5c9d6;
+  border-radius: 6px;
+  vertical-align: middle;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 8px 2px;
+  box-sizing: border-box;
+}
+.input-text a {
+  display: inline-block;
+  position: relative;
+  min-width: 70px;
+  padding: 5px 20px;
+  border: 1px solid #437dea;
+  background: #437dea;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  vertical-align: -1.5px;
+  margin-left: 2px;
+}
+.input-text a:after {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  vertical-align: -3px;
+  background: url('../img/btn_icon_sprite.png') no-repeat;
+  background-position: right 71.42%;
+}
+
 .menu-info:before {
   background: url('../img/sub_box_default.png') no-repeat;
 }
@@ -21,7 +120,7 @@
 }
 
 .tree ul {
-  padding-top: 20px;
+  padding-top: 70px;
   position: relative;
   /* transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -37,7 +136,23 @@
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s; */
 }
-
+ul.right-tree-wrap:before {
+  display: none;
+}
+ul.right-tree-wrap {
+  padding-top: 0;
+  position: absolute;
+  left: calc( 50% + 23px);
+}
+ul.right-tree-wrap:after {
+  content: '';
+  position: absolute;
+  left: -23px;
+  bottom: 22px;
+  width: 28px;
+  height: 1px;
+  background: #c5c9d6;
+}
 .main-tree > ul > li {
   float: none;
 }
@@ -90,43 +205,37 @@ border-radius: 5px 0 0 0;
 
 /*Time to add downward connectors from parents*/
 .tree ul ul::before{
-content: '';
-position: absolute; top: 0; left: 50%;
-border-left: 1px solid #ccc;
-width: 0; height: 20px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #c5c9d6;
+  width: 0;
+  height: 70px;
   margin-left: -1px;
 }
 
-.tree li a{
-border: 1px solid #ccc;
-padding: 5px 10px;
-text-decoration: none;
-color: #666;
-font-family: arial, verdana, tahoma;
-font-size: 11px;
-display: inline-block;
-
-border-radius: 5px;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-
-transition: all 0.5s;
--webkit-transition: all 0.5s;
--moz-transition: all 0.5s;
+.tree li a {
+  display: inline-block;
+  width: 200px;
+  border-radius: 6px;
+  border: 1px solid #c5c9d6;
+  font-size: 16px;
+  font-weight: 300;
+  color: #363c5a;
+  line-height: 43px;
+  background-color: #f7f8fa;
 }
-
+.tree li.main-tree > a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #111d68;
+  line-height: 60px;
+}
 /*Time for some hover effects*/
 /*We will apply the hover effect the the lineage of the element also*/
-.tree li a:hover, .tree li a:hover+ul li a {
-background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
-}
-/*Connector styles on hover*/
-.tree li a:hover+ul li::after,
-.tree li a:hover+ul li::before,
-.tree li a:hover+ul::before,
-.tree li a:hover+ul ul::before{
-border-color:  #94a0b4;
-}
+
 
 li a.just-line {
   display: none;
