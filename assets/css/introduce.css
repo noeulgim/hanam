@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+
+.menu-info:before {
+  background: url('../img/sub_box_default.png') no-repeat;
+}
+
+/*con-info*/
+
 .con-info.white {
   border-top: 0;
   margin-top: 0;
@@ -18,6 +25,8 @@
   color: #437dea;
   font-weight: 600;
 }
+
+/*con-search*/
 
 .con-search {
   display: flex;
@@ -103,28 +112,253 @@
   background-position: right 71.42%;
 }
 
-.menu-info:before {
-  background: url('../img/sub_box_default.png') no-repeat;
+/*con-tree-wrap*/
+.con-tree-wrap {
+  margin-top: 60px;
+  letter-spacing: -.03em;
+}
+.con-tree {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.box {
+  display: inline-block;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c5c9d6;
+  box-sizing: border-box;
+}
+.con-tree.first .main-tree {
+  position: relative;
+  padding-bottom: 70px;
+}
+.main-tree > a {
+  width: 200px;
+  display: inline-block;
+  background: #111d68;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 60px;
+  box-sizing: border-box;
+  border: 0;
+}
+.con-tree.first .main-tree:nth-child(2) {
+  padding-bottom: 280px;
+}
+.con-tree.first .main-tree:nth-child(2):after {
+  content: '';
+  position: absolute;
+  height: 280px;
+  width: 1px;
+  background: #c5c9d6;
+  top: 60px;
+  left: 50%;
+}
+.main-tree:nth-child(2) > a {
+  background: #28348a;
+}
+.right-tree-wrap {
+  position: absolute;
+  left: calc( 50% + 27px );
+}
+.right-tree-wrap a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-left: 27px;
+  background: #f7f8fa;
+  font-size: 16px;
+  color: #363c5a;
+  line-height: 43px;
+  margin: 12px 0;
+}
+.right-tree-wrap a:before {
+  content: '';
+  position: absolute;
+  width: 27px;
+  height: 35px;
+  border-left: 1px solid #c5c9d6;
+  border-bottom: 1px solid #c5c9d6;
+  left: -28px;
+  top: -14px;
+  cursor: auto;
+}
+.right-tree-wrap a + a:before {
+  top: -13px;
+}
+.right-tree-wrap a:after {
+  content: '';
+  position: absolute;
+  width: 27px;
+  height: 35px;
+  border-left: 1px solid #c5c9d6;
+  left: -28px;
+  bottom: -14px;
+  cursor: auto;
+}
+.sub-tree > ul {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+.sub-tree > ul > li {
+  float: left;
+  width: 148px;
+}
+.tree-title {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  line-height: 48px;
+  border-color: #111d68;
+}
+.tree-title a.box {
+  box-sizing: border-box;
+}
+.tree-title a {
+  color: #111d68;
+  font-weight: 500;
+}
+.tree-title a:before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  left: -8px;
+  height: 19px;
+  border-top: 1px solid #c5c9d6;
+  top: -22px;
+  cursor: auto;
+}
+.tree-title a:after {
+  content: '';
+  position: absolute;
+  width: 55%;
+  left: 50%;
+  height: 19px;
+  border-top: 1px solid #c5c9d6;
+  border-left: 1px solid #c5c9d6;
+  top: -22px;
+  cursor: auto;
+}
+li:first-child .tree-title a:before {
+  display: none;
+}
+li:last-child .tree-title a:before {
+  width: 56%;
+}
+li:last-child .tree-title a:after {
+  border-top: 0;
+  top: -21px;
+}
+.tree-sub {
+  width: 100%;
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  margin-top: -3px;
+  min-height: 161px;
+  padding: 20px 0;
+}
+.tree-sub a {
+  font-size: 16px;
+  color: #636363;
+  line-height: 24px;
 }
 
+.con-tree.part {
+  display: flex;
+  justify-content: space-around;
+}
+.con-tree.part .main-tree > .box a {
+  color: #fff;
+  cursor: pointer;
+}
+.con-tree.part .main-tree {
+  flex: 50%;
+  margin: 0 .5%;
+}
+.con-tree.part .main-tree > .box {
+  width: 200px;
+  background: #437dea;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  border: 0;
+  cursor: pointer;
+}
+.con-tree.part .sub-box {
+  position: relative;
+  padding: 7px 14px;
+  border: 1px solid #c5c9d6;
+  border-radius: 6px;
+  margin-top: 19px;
+}
+.con-tree.part .sub-box:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 19px;
+  background: #c5c9d6;
+  top: -20px;
+  left: 50%;
+}
+.con-tree.part .sub-box ul {
+  display: flex;
+  justify-content: space-around;
+}
+.con-tree.part .sub-box li {
+  border: 0;
+  background: #f4f5f9;
+  color: #363c5a;
+  line-height: 50px;
+  width: 96%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+.con-tree.part .sub-box li + li {
+  margin-left: 2%;
+}
+.con-tree.third .main-tree, .con-tree.fourth .main-tree {
+  flex: 100%;
+}
+.con-tree.fourth .main-tree > .box {
+  background: #00a3a0;
+}
+.con-tree.fourth .sub-box ul {
+  display: block;
+  overflow: hidden;
+}
+.con-tree.fourth .sub-box li {
+  width: calc( 91% / 7 );
+  float: left;
+}
+.con-tree.fourth .sub-box li + li {
+  margin-left: 1.5%;
+}
+.con-tree.fourth .sub-box li:nth-child(7n+1) {
+  margin-left: 0;
+}
 /*Now the CSS*/
 
-.tree {
+/* .tree {
   width: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
-.tree > ul {
-  display: inline-block;
-}
 
 .tree ul {
   padding-top: 70px;
   position: relative;
-  /* transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s; */
+}
+.tree > ul {
+  display: inline-block;
+  padding-top: 60px;
 }
 
 .tree li {
@@ -132,9 +366,6 @@
   text-align: center;
   position: relative;
   padding: 20px 5px 0 5px;
-  /* transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s; */
 }
 ul.right-tree-wrap:before {
   display: none;
@@ -144,10 +375,17 @@ ul.right-tree-wrap {
   position: absolute;
   left: calc( 50% + 23px);
 }
-ul.right-tree-wrap:after {
+ul.right-tree-wrap > a {
+  position: absolute;
+}
+ul.right-tree-wrap > li.right-tree {
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.right-tree-wrap > a:after {
   content: '';
   position: absolute;
-  left: -23px;
+  left: -29px;
   bottom: 22px;
   width: 28px;
   height: 1px;
@@ -176,21 +414,19 @@ ul.right-tree-wrap:after {
   border-left: 1px solid #c5c9d6;
 }
 
-/*We need to remove left-right connectors from elements without
-any siblings*/
+
 .tree li:only-child::after, .tree li:only-child::before {
 display: none;
 }
 
-/*Remove space from the top of single children*/
+
 .tree li:only-child{ padding-top: 0;}
 
-/*Remove left connector from first child and
-right connector from last child*/
+/
 .tree li:first-child::before, .tree li:last-child::after{
 border: 0 none;
 }
-/*Adding back the vertical connector to the last nodes*/
+
 .tree li:last-child::before{
 border-right: 1px solid #ccc;
 border-radius: 0 5px 0 0;
@@ -203,7 +439,6 @@ border-radius: 5px 0 0 0;
 -moz-border-radius: 5px 0 0 0;
 }
 
-/*Time to add downward connectors from parents*/
 .tree ul ul::before{
   content: '';
   position: absolute;
@@ -225,6 +460,7 @@ border-radius: 5px 0 0 0;
   color: #363c5a;
   line-height: 43px;
   background-color: #f7f8fa;
+  box-sizing: border-box;
 }
 .tree li.main-tree > a {
   color: #fff;
@@ -232,10 +468,8 @@ border-radius: 5px 0 0 0;
   font-weight: 500;
   background-color: #111d68;
   line-height: 60px;
+  box-sizing: border-box;
 }
-/*Time for some hover effects*/
-/*We will apply the hover effect the the lineage of the element also*/
-
 
 li a.just-line {
   display: none;
@@ -245,4 +479,4 @@ padding-top: 74px;
 }
 a.just-line + ul:before {
 height: 74px;
-}
+} */

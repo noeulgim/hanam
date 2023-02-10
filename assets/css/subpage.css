@@ -783,7 +783,7 @@ ul > li.site > a.link:before {
 .satisfy-check > span {
   font-size: 15px;
   line-height: 24px;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.02em;
   color: #363c5a;
 }
 .satisfy-radio {
@@ -808,6 +808,7 @@ ul > li.site > a.link:before {
   vertical-align: top;
   box-sizing: border-box;
   letter-spacing: -0.8px;
+  cursor: pointer;
 }
 .satisfy-radio label:before {
   content: '';
@@ -821,6 +822,7 @@ ul > li.site > a.link:before {
   border-radius: 50%;
   background-color: #fff;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .satisfy-radio label:after {
   content: '';
@@ -842,6 +844,9 @@ ul > li.site > a.link:before {
 .opinion {
   padding: 0 20px 15px;
 }
+.opinion form {
+  position: relative;
+}
 .opinion input {
   display: inline-block;
   margin: 2px 0;
@@ -855,13 +860,16 @@ ul > li.site > a.link:before {
   line-height: inherit;
 }
 .opinion input[type="text"] {
-  width: calc(100% - 127px);
+  width: calc(100% - 110px);
   margin-right: 9px;
   font-size: 14px;
   border: 1px solid #c5c9d6;
   color: #7d7d7d;
 }
 .opinion input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 15px;
   padding: 7px 10px;
   border-color: #7a7d96;
